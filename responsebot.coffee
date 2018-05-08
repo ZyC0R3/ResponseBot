@@ -15,7 +15,7 @@ module.exports = (robot) ->
 # KB Version Info
 # ---
   robot.hear /(what vaur|what VAUR)/, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V2.1'
+    msg.send 'The current version of Responses that is loaded is V2.2'
 # ---
 # KB Responces
 # ---
@@ -83,7 +83,7 @@ module.exports = (robot) ->
     msg.send '*Nextcloud:* Nextcloud - Protecting your data. V13.0.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
   robot.hear /(app madsonic)/, (msg) ->
     msg.send '*Madsonic:* Madsonic is a web-based media library. V6.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
-  robot.hear /(app resilio|app resilio sync)/, (msg) ->
+  robot.hear /(app resilio|app resilio sync|app btsync)/, (msg) ->
     msg.send '*Resilio Sync:* Have Your Files Anywhere,Sync to all your devices. V2.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
   robot.hear /(app mysql|app mariadb)/, (msg) ->
     msg.send '*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
