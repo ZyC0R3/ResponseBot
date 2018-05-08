@@ -1,5 +1,5 @@
 # Description:
-#   Helpbot, an Automated and (not so )Intuitive response Bot.
+#   Helpbot, an Automated and (not so) Intuitive response Bot.
 #   Hello and Good Morning Responses.
 #
 # Dependencies:
@@ -47,7 +47,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V3.0'
+    msg.send 'The current version of Responses that is loaded is V3.1'
   # ---
   # KB Responces
   # ---

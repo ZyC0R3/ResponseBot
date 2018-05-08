@@ -1,5 +1,5 @@
 // Description:
-//   Helpbot, an Automated and (not so )Intuitive response Bot.
+//   Helpbot, an Automated and (not so) Intuitive response Bot.
 //   Hello and Good Morning Responses
 //
 // Dependencies:
