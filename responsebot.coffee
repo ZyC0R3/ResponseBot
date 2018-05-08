@@ -1,5 +1,6 @@
 # Description:
 #   Helpbot, an Automated and (not so )Intuitive response Bot.
+#   Hello and Good Morning Responses.
 #
 # Dependencies:
 #   None
@@ -14,15 +15,42 @@
 #   TS = Troubleshooting Basics
 #   CL = Change Log for Updated Apps
 #
+# Author:
+#   ZyC0R3
+#
+hellos = [
+  'Well hello there, %'
+  'Hey %, Hello!'
+  'Marnin\', %'
+  'Good day, %'
+  'Good \'aye!, %'
+]
+mornings = [
+  'Good morning, %'
+  'Good morning to you too, %'
+  'Good day, %'
+  'Good \'aye!, %'
+]
 module.exports = (robot) ->
-# ---
-# KB Version Info
-# ---
+  # ---
+  # Hello and Good Morning, Author marioBonales, Edited for further use.
+  # ---
+  robot.hear /(hello|good( [d'])?ay(e)?)/i, (msg) ->
+    hello = undefined
+    hello = msg.random(hellos)
+    msg.send hello.replace('%', msg.message.user.name)
+  robot.hear /(^(good )?m(a|o)rnin(g)?)/i, (msg) ->
+    hello = undefined
+    hello = msg.random(mornings)
+    msg.send hello.replace('%', msg.message.user.name)
+  # ---
+  # KB Version Info
+  # ---
   robot.hear /(what vaur)/i, (msg) ->
     msg.send 'The current version of Responses that is loaded is V3.0'
-# ---
-# KB Responces
-# ---
+  # ---
+  # KB Responces
+  # ---
   robot.hear /(kb transmission remote)/i, (msg) ->
     msg.send 'Your Guide to setting up Transmission Remote Gui: https://goo.gl/aRnxvw'
   robot.hear /(kb dht)/i, (msg) ->
@@ -54,9 +82,9 @@ module.exports = (robot) ->
     msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
   robot.hear /(kb ticket|raise a ticket)/i, (msg) ->
     msg.send 'Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
-# ---
-# App Store Links
-# ---
+  # ---
+  # App Store Links
+  # ---
   robot.hear /(app plex)/i, (msg) ->
     msg.send '*Plex:* Organize your videos, music, and photos. VLatest Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
   robot.hear /(app wordpress)/i, (msg) ->
@@ -99,9 +127,9 @@ module.exports = (robot) ->
     msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
   robot.hear /(app rapidleech)/i, (msg) ->
     msg.send '*Rapidleech:* Rapid Leech is a free server transfer script. V2.43 Requires 1 app slot: https://www.appboxes.co/appstore/app/78'
-# ---
-# App Store Categories
-# ---
+  # ---
+  # App Store Categories
+  # ---
   robot.hear /(appcat chat)/i, (msg) ->
     msg.send '*This is a list of applications that are categorised as Chat applications*'
     msg.send '*Mattermost:* V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
@@ -121,9 +149,9 @@ module.exports = (robot) ->
     msg.send '*This is a list of applications that are categorised under Sync*'
     msg.send '*Resilio Sync:* Have Your Files Anywhere,Sync to all your devices. V2.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
     msg.send '*Nextcloud:* Nextcloud - Protecting your data. V13.0.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
-# ---
-# Chat Triggers
-# ---
+  # ---
+  # Chat Triggers
+  # ---
   robot.hear /(%PORTS|100EXTERNAL%)/i, (msg) ->
     msg.send 'Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port'
   robot.hear /(set up sftp|setting up sftp)/i, (msg) ->
@@ -134,9 +162,9 @@ module.exports = (robot) ->
     msg.send 'When any updated is performed the port that is assigned can somtimes be changed, First point of call is to check the port you are using is the correct port on you app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps'
   robot.hear /(SSL_ERROR_BAD_CERT_DOMAIN)/i, (msg) ->
     msg.send 'If this is a Firefox error, although it directly relates to the appboxes.co website it is not an error with you accessing the page. This error is only produced on Firefox and means the app you are trying to install/update has not finished yet, if the same page is opened in chrome or IE you would get the Please Wait landing page advising the same. Please do not raise a ticket for this reason, if however, you have been getting the Please Wait page for more than 30 mins please let an admin know or raise a ticket. '
-# ---
-# Simple Troubleshooting
-# ---
+  # ---
+  # Simple Troubleshooting
+  # ---
   robot.hear /(ts ftp)/i, (msg) ->
     msg.send 'Quick Troubleshooting Tips for FTP'
     msg.send '1: Make sure the Port, Password, Username and Domain you are using is correct, Check here https://www.appboxes.co/appboxmanager/installedapps'
@@ -149,10 +177,10 @@ module.exports = (robot) ->
     msg.send '2: If after 15 mins (note large amounts of data/actions can take longer, be proportionate resart you instance of ruTorrent here: https://www.appboxes.co/appboxmanager/installedapps) .'
     msg.send '3: Next is a bit of common sense, read the last hour or so of chat, are the admins dealing with a known issue, has it been reported, are you the only one effected. If it is known, being deblt with and you are not alone *JUST BE PATIENT* it will be fixed soon.'
     msg.send '4: If the first 3 dont help then please holla an admin or raise a ticket.'
-# ---
-# Change log
-# This is more of a location to store known changes to applciations as they are updated, it however is not a complete chagne log.
-# ---
+  # ---
+  # Change log
+  # This is more of a location to store known changes to applciations as they are updated, it however is not a complete chagne log.
+  # ---
   robot.hear /(cl rutorrent)/i, (msg) ->
     msg.send 'V3.8-2: Added ffmpeg'
     msg.send 'V3.8-3: Various fixes & stability improvements'
@@ -161,3 +189,10 @@ module.exports = (robot) ->
   robot.hear /(cl ftp|cl cute ?ftp(d)?)/i, (msg) ->
     msg.send 'V1.0.36-1: Raise number of concurrent connections'
   return
+
+# ---
+# Script for AppBoxesCo use only V3.1
+# ZyC0R3
+# ---
+# generated by js2coffee 2.2.0
+# ---
