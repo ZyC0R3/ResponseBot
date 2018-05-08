@@ -15,7 +15,7 @@ module.exports = (robot) ->
 # KB Version Info
 # ---
   robot.hear /(what vaur|what VAUR)/, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V3'
+    msg.send 'The current version of Responses that is loaded is V2.1'
 # ---
 # KB Responces
 # ---
@@ -120,7 +120,7 @@ module.exports = (robot) ->
 # ---
   robot.hear /(%PORTS|100EXTERNAL%)/, (msg) ->
     msg.send 'Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port'
-  robot.hear /(set up SFTP)/, (msg) ->
+  robot.hear /(set up SFTP|set up sftp)/, (msg) ->
     msg.send 'I knew someone was going to ask: instruction on setting up SFTP: https://goo.gl/xMYSmy'
   robot.hear /(504 [error,getplugins]|getplugins|error 504)/, (msg) ->
     msg.send '*STOP* do not restart your application or refresh the page, ruTorrent is known to have this issue. ruTorrent is single threaded on its XMLRPC interface, that means it cannot handle a whole load of commands at once very well. Therefore, when doing any actions, do a small chunk, wait for them to finish, then continue. If you still have this error after 30 mins please message an Admin or raise a ticket.'
