@@ -9,7 +9,7 @@
 #
 # Commands:
 #   Basic Support responce
-#   
+#
 module.exports = (robot) ->
 # ---
 # KB Version Info
@@ -67,7 +67,7 @@ module.exports = (robot) ->
     msg.send '*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
   robot.hear /(app ubuntu desktop|app vnc)/, (msg) ->
     msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V17.10 Requires 5 app slot: https://www.appboxes.co/appstore/app/85'
-  robot.hear /(app ruTorrent)/, (msg) ->
+  robot.hear /(app rutorrent)/, (msg) ->
     msg.send '*ruTorrent:* ruTorrent is a web frontend for rtorrent. V3.8-5 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   robot.hear /(app deluge)/, (msg) ->
     msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
@@ -124,9 +124,17 @@ module.exports = (robot) ->
     msg.send 'I knew someone was going to ask: instruction on setting up SFTP: https://goo.gl/xMYSmy'
   robot.hear /(504 [error,getplugins]|getplugins|error 504)/, (msg) ->
     msg.send '*STOP* do not restart your application or refresh the page, ruTorrent is known to have this issue. ruTorrent is single threaded on its XMLRPC interface, that means it cannot handle a whole load of commands at once very well. Therefore, when doing any actions, do a small chunk, wait for them to finish, then continue. If you still have this error after 30 mins please message an Admin or raise a ticket.'
-  robot.hear /(The remote host actively refused the attempt to connect to it.)/, (msg) ->
-    msg.send 'Test'
+  robot.hear /(actively refused)/, (msg) ->
+    msg.send 'When forced updateds are performed on Pure-FTPd or Ubuntu Server (SSH) the port can somtimes be changed, First point of call is to check the port you are using is the correct port on you app settings page, clikc here to login and check: https://www.appboxes.co/appboxmanager/installedapps'
   return
+
+# ---
+# Change log
+# This is more of a location to store known changes to applciations as they are updated, it however is not a complete chagne log.
+# ---
+  robot.hear /(rutorrent v3.8-5|rutorrent V3.8.5)/, (msg) ->
+    msg.send 'Line 1'
+    msg.send 'Line 2'
 
 # ---
 # Script for AppBoxesCo use only
