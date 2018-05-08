@@ -15,7 +15,7 @@ module.exports = (robot) ->
 # KB Version Info
 # ---
   robot.hear /(what vaur|what VAUR)/, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V2.2'
+    msg.send 'The current version of Responses that is loaded is V3'
 # ---
 # KB Responces
 # ---
