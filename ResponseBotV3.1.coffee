@@ -152,7 +152,7 @@ module.exports = (robot) ->
   # ---
   # Chat Triggers
   # ---
-  robot.hear /.*(torrent|mov(e|ing)).*(torrent|mov(e|ing)).*/i, (msg) ->
+  robot.hear /.*(torrent).*(mov(e|ing)).*/i, (msg) ->
     msg.send 'We\'ve recently issued an automated ruTorrent update which will reset automove, so torrents will be automatically moved from /torrents/downloading to /torrents/completed. You can turn this off in ruTorrent via Settings > Autotools, and then untick "Enable AutoMove". This will be the last time we\'ll be switching this on via an update, so your setting will stick in future.'
   robot.hear /(%PORTS|100EXTERNAL%)/i, (msg) ->
     msg.send 'Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port'
@@ -188,6 +188,7 @@ module.exports = (robot) ->
     msg.send 'V3.8-3: Various fixes & stability improvements'
     msg.send 'V3.8-4: Performance updates, Fixed GeoIP, made /home viewable and added proxy settings to nginx'
     msg.send 'V3.8-5: Adjusted settings and timeout'
+    msg.send 'V3.8-6: A Legacy file from a old version was overriding user settings and preventing seeding of torrents, this was removed.'
   robot.hear /(cl ftp|cl cute ?ftp(d)?)/i, (msg) ->
     msg.send 'V1.0.36-1: Raise number of concurrent connections'
   return
