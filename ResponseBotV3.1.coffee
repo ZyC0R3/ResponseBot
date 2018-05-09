@@ -152,6 +152,8 @@ module.exports = (robot) ->
   # ---
   # Chat Triggers
   # ---
+  robot.hear /.*(torrent|mov(e|ing)).*(torrent|mov(e|ing)).*/i, (msg) ->
+    msg.send 'We\'ve recently issued an automated ruTorrent update which will reset automove, so torrents will be automatically moved from /torrents/downloading to /torrents/completed. You can turn this off in ruTorrent via Settings > Autotools, and then untick "Enable AutoMove". This will be the last time we\'ll be switching this on via an update, so your setting will stick in future.'
   robot.hear /(%PORTS|100EXTERNAL%)/i, (msg) ->
     msg.send 'Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port'
   robot.hear /(set up sftp|setting up sftp)/i, (msg) ->
