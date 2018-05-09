@@ -158,7 +158,7 @@ module.exports = (robot) ->
     msg.send 'I knew someone was going to ask: instruction on setting up SFTP: https://goo.gl/xMYSmy'
   robot.hear /(504 [error,getplugins]|getplugins|error 504)/i, (msg) ->
     msg.send '*STOP* do not restart your application or refresh the page, ruTorrent is single threaded on its XMLRPC interface, that means it cannot handle a whole load of commands at once very well. Therefore, when doing any actions, do a small chunk, wait for them to finish, then continue. If you still have this error after 30 mins please message an Admin or raise a ticket.'
-  robot.hear /(actively refused|FTP cant connect|connection refused|ECONNREFUSED|.*(FTP|port).*(FTP|port).*)/i, (msg) ->
+  robot.hear /(actively refused|FTP cant connect|connection refused|ECONNREFUSED|.*(FTP|port).*(FTP|port).*|.*ftp.*not.*working.*)/i, (msg) ->
     msg.send 'When any updated is performed the port that is assigned can somtimes be changed, First point of call is to check the port you are using is the correct port on you app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps'
   robot.hear /(SSL_ERROR_BAD_CERT_DOMAIN)/i, (msg) ->
     msg.send 'If this is a Firefox error, although it directly relates to the appboxes.co website it is not an error with you accessing the page. This error is only produced on Firefox and means the app you are trying to install/update has not finished yet, if the same page is opened in chrome or IE you would get the Please Wait landing page advising the same. Please do not raise a ticket for this reason, if however, you have been getting the Please Wait page for more than 30 mins please let an admin know or raise a ticket. '
