@@ -78,7 +78,7 @@ module.exports = (robot) ->
     msg.send 'Click here for instructions on setting up FTP: https://goo.gl/5toACz'
     msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
     msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
-  robot.hear /(kb sftp|kb ssh)/i, (msg) ->
+  robot.hear /(kb (sftp|ssh))/i, (msg) ->
     msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
   robot.hear /(kb ticket|raise a ticket)/i, (msg) ->
     msg.send 'Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
@@ -121,7 +121,7 @@ module.exports = (robot) ->
     msg.send '*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
   robot.hear /(app (mysql|mariadb))/i, (msg) ->
     msg.send '*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
-  robot.hear /(app (nginx|php|php7))/i, (msg) ->
+  robot.hear /(app (nginx|php(7)?))/i, (msg) ->
     msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75'
   robot.hear /(app znc)/i, (msg) ->
     msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
@@ -193,7 +193,7 @@ module.exports = (robot) ->
     msg.send 'V1.0.36-1: Raise number of concurrent connections'
   robot.hear /(cl deluge)/i, (msg) ->
     msg.send 'V1.1.3.5-1: Public release'
-    msg.send 'V1.1.3.5-2: Something was changed, not raelly that sure, give me a while and ask again.'
+    msg.send 'V1.1.3.5-2: Something was changed, not really that sure, give me a while and ask again.'
   return
 
 # ---
