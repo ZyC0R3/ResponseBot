@@ -17,6 +17,7 @@
 #
 # Author:
 #   ZyC0R3
+#   Rid
 #
 hellos = [
   'Well hello there, %'
