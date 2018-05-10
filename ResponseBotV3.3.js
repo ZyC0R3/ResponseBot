@@ -198,7 +198,7 @@ module.exports = function(robot) {
     // Regex Test - https://regex101.com/r/nqiEhu/2/tests
     var username;
     username = msg.message.user.name;
-    return msg.send('We\'ve recently issued an automated ruTorrent update which reset user setting for Autotools, this means automove was been disbaled, torrents will no longer be automatically moved from /torrents/downloading. You can turn this feature back on in ruTorrent via Settings > Autotools, and then tick "Enable AutoMove" and set your own location. This will be the last time we\'ll be overriding this via an update, so your setting will stick in future. Appologies once again. @' + username);
+    return msg.send('We\'ve recently issued an automated ruTorrent update which reset user setting for Autotools, this means automove has been disbaled, torrents will no longer be automatically moved from /torrents/downloading. You can turn this feature back on in ruTorrent via Settings > Autotools, and then tick "Enable AutoMove" and set your own location. This will be the last time we\'ll be overriding this via an update, so your setting will stick in future. Appologies once again. @' + username);
   });
   robot.hear(/(%PORTS|100EXTERNAL%)/i, function(msg) {
     var username;
