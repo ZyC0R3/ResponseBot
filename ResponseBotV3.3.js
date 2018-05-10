@@ -45,7 +45,8 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of Responses that is loaded is V3.3');
+    msg.send('The current version of Responses that is loaded is V3.3');
+    return msg.send ('\(The _"Fish, chips and peas"_ Update\)');
   });
   // ---
   // KB Responses
@@ -213,13 +214,14 @@ module.exports = function(robot) {
   robot.hear(/(504 \[error,getplugins\]|getplugins|error 504)/i, function(msg) {
     var username;
     username = msg.message.user.name;
-    return msg.send('*STOP*, @' + username + ' do not restart your application or refresh the page, ruTorrent is single threaded on its XMLRPC interface, this means it doesn\'t manage excessive commands simultaneously. Therefore, when doing any actions, do a small chunk, wait for them to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.');
+    return msg.send('*STOP*, @' + username + ' do not restart your application or refresh the page, ruTorrent is single threaded on its XMLRPC interface, this means it cant not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.');
   });
   robot.hear(/(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, function(msg) {
     // Regex Test - https://regex101.com/r/Ne5pIs/5/tests
     var username;
     username = msg.message.user.name;
-    return msg.send('@' + username + ' When any update is performed the port that is assigned can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps');
+    msg.send('@' + username + ' When any update is performed the port that is assigned to that app can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps, If the port is a match however then please let us know in chat to make sure there is no other reason for this error.');
+    return msg.send('If this error is FTP or SFTP related please type "ts ftp" for further support');
   });
   robot.hear(/(SSL_ERROR_BAD_CERT_DOMAIN)/i, function(msg) {
     var username;
@@ -236,10 +238,10 @@ module.exports = function(robot) {
   // ---
   robot.hear(/(ts ftp)/i, function(msg) {
     msg.send('Quick Troubleshooting Tips for FTP or SFTP');
-    msg.send('1: Make sure the Port, Password, Username (SFTP the username is root) and Domain you are using is correct, Check here https://www.appboxes.co/appboxmanager/installedapps');
+    msg.send('1: Make sure the Port, Password, Username (For SFTP the username is: _root_) and Domain you are using is correct, Check here https://www.appboxes.co/appboxmanager/installedapps');
     msg.send('2: If the above does not work, and you are using FileZilla, remove the connection from connection manager and add it again.');
     msg.send('3: Try installing a second Pure-FTPd applicaiton on your AppBox, *DO NOT* remove the troubled instance, this is to test there is no other errors with your box or FTP globally.');
-    return msg.send('4: Last and only option is try SFTP _(Type kb sftp for support)_, if this fails too then please holla at an admin');
+    return msg.send('4: Last and only option is try SFTP _(Type kb sftp for support setting it up)_, if this fails too then please holla at an admin');
   });
   robot.hear(/(ts rutorrent)/i, function(msg) {
     msg.send('Quick Troubleshooting Tips for ruTorrent');
