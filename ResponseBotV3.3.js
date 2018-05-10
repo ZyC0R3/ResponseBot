@@ -267,7 +267,7 @@ module.exports = function(robot) {
   });
   robot.hear(/(cl deluge)/i, function(msg) {
     msg.send('V1.1.3.5-1: Public release');
-    return msg.send('V1.1.3.5-2: Something was changed, not really that sure, give me a while and ask again.');
+    return msg.send('V1.1.3.5-2: Fixed an issue where only 3 torrents would work simultaneously.');
   });
 };
 // ---

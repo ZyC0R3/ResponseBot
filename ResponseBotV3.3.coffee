@@ -211,7 +211,7 @@ module.exports = (robot) ->
     msg.send 'V1.0.36-1: Raise number of concurrent connections'
   robot.hear /(cl deluge)/i, (msg) ->
     msg.send 'V1.1.3.5-1: Public release'
-    msg.send 'V1.1.3.5-2: Something was changed, not really that sure, give me a while and ask again.'
+    msg.send 'V1.1.3.5-2: Fixed an issue where only 3 torrents would work simultaneously.'
   return
 
 # ---
