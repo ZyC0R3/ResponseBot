@@ -1,32 +1,26 @@
 {
-  "name": "responsebot",
+  "name": "ResponseBot",
+  "version": "1.0.0",
   "description": "Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxes",
-  "version": "3.3.2",
-  "author": "ZyC0R3 (http://github.com/aw)",
-  "contributors": [
-    "Rid",
-  ],
-  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZyC0R3/ResponseBot.git"
+  },
   "keywords": [
     "hubot",
     "hubot-scripts",
     "response",
     "tech-support"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZyC0R3/ResponseBot.git"
-  },
+  "author": "ZyC0R3 (https://github.com/ZyC0R3)",
+  "contributors": "Rid",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ZyC0R3/ResponseBot/issues"
   },
-  "dependencies": {
-    "coffee-script": "^1.10.0"
-  },
-
-  "main": "index.coffee",
-  "scripts": {
-    "test": "what vaur"
-  },
-  "homepage": "https://github.com/ZyC0R3/ResponseBot#readme",
+  "homepage": "https://github.com/ZyC0R3/ResponseBot#readme"
 }
