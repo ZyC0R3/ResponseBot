@@ -206,6 +206,7 @@ module.exports = (robot) ->
     msg.send 'V3.8-4: Performance updates, Fixed GeoIP, made /home viewable and added proxy settings to nginx'
     msg.send 'V3.8-5: Adjusted settings and timeout'
     msg.send 'V3.8-6: A Legacy file from a old version was overriding user settings and preventing seeding of torrents, this was removed.'
+    msg.send 'V3.8-7: No changes to applcaiton files or settings, port mapping issue fixed'
   robot.hear /(cl (cute|.?ftp(d)?))/i, (msg) ->
     msg.send 'V1.0.36-1: Raise number of concurrent connections'
   robot.hear /(cl deluge)/i, (msg) ->
