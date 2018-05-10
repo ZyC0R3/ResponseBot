@@ -29,8 +29,10 @@ Then add **hubot-reload-scripts** to your `external-scripts.json`:
 
 ## Authors
 
+```
  ZyC0R3
  Rid
+```
 
 ## Change Log
 
