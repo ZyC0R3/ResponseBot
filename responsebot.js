@@ -277,7 +277,6 @@ module.exports = function(robot) {
 // V2.1 Added further chat triggers
 // V2.2 Alias updates for apps and triggers
 // V3.0 Change log & simple troubleshooting command added, added further chat triggers, remove the case sensitivity requirements from all commands
-// Further changes after this point will also include a repository name change ResponseBotV?.?
 // V3.1 Added hello and good morning responses, alias updates for apps and triggers
 // v3.2 Regex update for apps and triggers, bug fixed for false positives, spelling corrected, co author added
 // v3.3 Change log added, regex test site links commented in code to allow for more efficient changes, added personalised respoces to chat triggers
