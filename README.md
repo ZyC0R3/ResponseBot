@@ -9,7 +9,7 @@ In your hubot project repo, run:
 npm install responsebot --save
 ```
 
-Then add **hubot-reload-scripts** to your `external-scripts.json`:
+Then add **responsebot** to your `external-scripts.json`:
 
 ``` json
 [
