@@ -48,7 +48,6 @@ module.exports = (robot) ->
   # ---
   robot.hear /(what vaur)/i, (msg) ->
     msg.send 'The current version of Responses that is loaded is V3.3.5'
-    msg.send '\(The _"Fish, chips and peas"_ Update\)'
   # ---
   # KB Responses
   # ---
