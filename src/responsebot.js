@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    msg.send('The current version of Responses that is loaded is V3.3');
+    msg.send('The current version of Responses that is loaded is V3.3.4');
     return msg.send ('\(The _"Fish, chips and peas"_ Update\)');
   });
   // ---
@@ -214,7 +214,7 @@ module.exports = function(robot) {
   robot.hear(/(504 \[error,getplugins\]|getplugins|error 504)/i, function(msg) {
     var username;
     username = msg.message.user.name;
-    return msg.send('*STOP*, @' + username + ' do not restart your application or refresh the page, ruTorrent is single threaded on its XMLRPC interface, this means it cant not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.');
+    return msg.send('*STOP*, @' + username + ' do not restart your application or refresh the page, ruTorrent is single threaded on its XMLRPC interface, this means it can not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.');
   });
   robot.hear(/(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, function(msg) {
     // Regex Test - https://regex101.com/r/Ne5pIs/5/tests
@@ -270,16 +270,6 @@ module.exports = function(robot) {
     return msg.send('V1.1.3.5-2: Fixed an issue where only 3 torrents would work simultaneously.');
   });
 };
-// ---
-// Change Log:
-// V1.0 Internal test Version
-// V2.0 Launch version - beta tests
-// V2.1 Added further chat triggers
-// V2.2 Alias updates for apps and triggers
-// V3.0 Change log & simple troubleshooting command added, added further chat triggers, remove the case sensitivity requirements from all commands
-// V3.1 Added hello and good morning responses, alias updates for apps and triggers
-// v3.2 Regex update for apps and triggers, bug fixed for false positives, spelling corrected, co author added
-// v3.3 Change log added, regex test site links commented in code to allow for more efficient changes, added personalised respoces to chat triggers
 // ---
 // Script for AppBoxesCo use only V3.3
 // ZyC0R3 - Rid
