@@ -47,7 +47,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V3.3.4'
+    msg.send 'The current version of Responses that is loaded is V3.3.5'
     msg.send '\(The _"Fish, chips and peas"_ Update\)'
   # ---
   # KB Responses
@@ -181,6 +181,9 @@ module.exports = (robot) ->
   robot.hear /((raise).*ticket)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
+  robot.respond /(who made you)/i, (msg) ->
+    username = msg.message.user.name
+    msg.send '@' + username + ' Zycore gave me life, Rid made me a real bot'
   # ---
   # Simple Troubleshooting
   # ---
