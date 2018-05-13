@@ -47,7 +47,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V4.0.2'
+    msg.send 'The current version of Responses that is loaded is V4.0.3'
   # ---
   # KB Responses
   # ---
@@ -55,8 +55,6 @@ module.exports = (robot) ->
     msg.send 'Your Guide to setting up Transmission Remote Gui: https://goo.gl/aRnxvw'
   robot.hear /(kb dht)/i, (msg) ->
     msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
-  robot.hear /(kb raise a bug)/i, (msg) ->
-    msg.send 'You can raise or track the status of a bug or requested feature at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
   robot.hear /(kb transdroid ru)/i, (msg) ->
     msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
   robot.hear /(kb (autodl|(-?irssi)))/i, (msg) ->
@@ -80,9 +78,6 @@ module.exports = (robot) ->
     msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
   robot.hear /(kb (sftp|ssh))/i, (msg) ->
     msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
-  robot.hear /(kb (ticket|raise a ticket))/i, (msg) ->
-    msg.send 'Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
-  # ---
   # App Store Links
   # ---
   robot.hear /(app plex)/i, (msg) ->
@@ -99,8 +94,11 @@ module.exports = (robot) ->
     msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
   robot.hear /(app lets chat)/i, (msg) ->
     msg.send '*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
-  robot.hear /(app (ubuntu desktop|vnc))/i, (msg) ->
+  robot.hear /(app ubuntu desktop|vnc|17)/i, (msg) ->
     msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V17.10 Requires 5 app slot: https://www.appboxes.co/appstore/app/85'
+  robot.hear /(app ubuntu beta|18)/i, (msg) ->
+    msg.send '*Ubuntu Desktop (VNC) BETA:* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97' 
+    msg.send '*This is a BETA version:* This distribution has a known bug preventing NoVNC from working, please post any other issues on the bug tracker _(Type \'Raise a Bug\' for more info)_, *NOTE:* default username is \'appbox\' not root.'
   robot.hear /(app rutorrent)/i, (msg) ->
     msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-6 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   robot.hear /(app deluge)/i, (msg) ->
@@ -169,25 +167,33 @@ module.exports = (robot) ->
   robot.hear /(504 \[error,getplugins\]|getplugins|error 504)/i, (msg) ->
     username = msg.message.user.name
     msg.send '*STOP*, @' + username + ' do not restart your application or refresh the page. ruTorrent is single threaded on its XMLRPC interface, this means it can not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.'
+    msg.send '_(Type \'Raise a Ticket\' for more info)_'
   robot.hear /(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, (msg) ->
     # Regex Test - https://regex101.com/r/Ne5pIs/5/tests
     username = msg.message.user.name
     msg.send '@' + username + ' When any update is performed the port that is assigned to that app can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps, If the port is a match however then please let us know in chat to make sure there is no other reason for this error.'
-    msg.send 'If this error is FTP or SFTP related please type "ts ftp" for further support'
+    msg.send 'If this error is FTP or SFTP related please type \'ts ftp\' for further support'
   robot.hear /(SSL_ERROR_BAD_CERT_DOMAIN)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' If this error is seen while using Firefox, although it directly relates to the appboxes.co website it is not an error with you accessing the page. This error is only produced on Firefox and means the app you are trying to install/update has not finished yet. If the same page is opened in Chrome or IE you would get the "Please Wait" landing page advising the same. Please do not raise a ticket for this reason, if however, you have been getting the "Please Wait" page for more than 30 mins holla at an admin or raise a ticket.'
+    msg.send '_(Type \'Raise a Ticket\' for more info)_'
   robot.hear /((raise).*ticket)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
   robot.respond /(who made you)/i, (msg) ->
-    username = msg.message.user.name
-    msg.send '@' + username + ' Zycore gave me life, Rid made me a real bot.'
+  msg.send 'Zycore gave me life, Rid made me a real bot.'
   robot.hear /((disk).*(quota|full))/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' If you have filled your Disk Quota, some applications will not work/load. In this case you will need to delete some data from your account to be able to continue to use your services. If the Disk Quota is full then the FTP App cant write to its logs/pid files and hence this is not an option to achive this.'
     msg.send 'Use the file explorer on your https://www.appboxes.co/appboxmanager/appboxes page, click on the appbox that has the full Disk Quota then click \'File Explorer\' top right hand corner below the logout button.'
     msg.send 'This File Explorer is owned by a privileged user and access the filesystem outside of the container so will work regardless  if your disk is full or not. Once you have deleted data it may take up to 15 minutes for services to reload, restarting applicaiton during this time will not speed this process up.'
+  robot.hear /((submit|raise) a?.*bug|issue tracker)/i, (msg) ->
+  username = msg.message.user.name
+    msg.send '@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
+  robot.hear /(novnc)/i, (msg) ->
+    username = msg.message.user.name
+    msg.send '@' + username + ' If you are trying to use NoVNC to connect to the BETA version of Ubuntu Desktop (VNC) then this will not work, there is a known bug for this and is currently under investigation. Please do not raise a ticket for this issues. Refer to the Issue Tracker for further information _(Type \'Issue Tracker\' for more info)_'
+    msg.send 'If your issue is unrelated to to this then please ask for support here, hola at an admin (if other users are not able to support) or rasie a ticket. _(Type \'Raise a Ticket\' for more info)_'
   # ---
   # Simple Troubleshooting
   # ---
