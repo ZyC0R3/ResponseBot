@@ -183,11 +183,11 @@ module.exports = (robot) ->
   robot.respond /(who made you)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' Zycore gave me life, Rid made me a real bot.'
-  robot.respond /((disk).*quota)/i, (msg) ->
+  robot.hear /((disk).*(quota|full))/i, (msg) ->
     username = msg.message.user.name
-    msg.send '@' + username + ' If you have filled you Disk Quota some applications will not work/load. In this case you will need to delete some data from your account to be able to continue to use your services. If the Disk Quota is full then the FTP App cant write to its logs/pid files and hence this is not an option to achive this.'
+    msg.send '@' + username + ' If you have filled your Disk Quota, some applications will not work/load. In this case you will need to delete some data from your account to be able to continue to use your services. If the Disk Quota is full then the FTP App cant write to its logs/pid files and hence this is not an option to achive this.'
     msg.send 'Use the file explorer on your https://www.appboxes.co/appboxmanager/appboxes page, click on the appbox that has the full Disk Quota then click \'File Explorer\' top right hand corner below the logout button.'
-    mag.send 'This File Explorer is owned by a privileged user and access the filesystem outside of the container so will work regardless of if your disk is full or not. Once you have deleted data it may take up to 15 minutes for services to reload, restarting applicaiton during this time will not speed this process up.'
+    mag.send 'This File Explorer is owned by a privileged user and access the filesystem outside of the container so will work regardless  if your disk is full or not. Once you have deleted data it may take up to 15 minutes for services to reload, restarting applicaiton during this time will not speed this process up.'
   # ---
   # Simple Troubleshooting
   # ---
