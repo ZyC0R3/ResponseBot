@@ -1,7 +1,7 @@
 {
   "name": "responsebot",
-  "version": "4.0.1",
-  "description": "Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxes",
+  "version": "4.1.0",
+  "description": "Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxesCo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

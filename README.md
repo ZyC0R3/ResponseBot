@@ -20,7 +20,7 @@ Then add **responsebot** to your `external-scripts.json`:
 ## Usage
 
 ```
- KB = Knowledgebase Articles
+ KB = Knowledgebase Articles (Add users name to end of command to tag them in response)
  App = app "appname"
  APPCAT = appcat "category"
  TS = Troubleshooting Basics
@@ -48,5 +48,7 @@ V3.3.0 Change log added, regex test site links commented in code to allow for mo
 V3.3.3 First test push to RocketChat Bot
 v3.3.4 Update to Script Files
 V4.0.0 Cas we wanted a new number
-V4.0.1
+V4.0.1 Bug fixes
+V4.0.4 New Chat triggers added
+V4.1.0 Users can now be Tagged in commands for ResponseBot to target them for the reply
 ```
