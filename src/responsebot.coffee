@@ -9,7 +9,7 @@
 #   install via internal Hubot
 #
 # Commands:
-#   KB = Knowledgebase Articles
+#   KB = Knowledgebase Articles (Add users name to end of command to tag them in response)
 #   App = app "appname"
 #   APPCAT = appcat "category"
 #   TS = Troubleshooting Basics
@@ -47,37 +47,90 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V4.0.3'
+    msg.send 'The current version of Responses that is loaded is V4.1.0'
   # ---
-  # KB Responses
+  # KB Responses with user Triggers
   # ---
-  robot.hear /(kb transmission remote)/i, (msg) ->
-    msg.send 'Your Guide to setting up Transmission Remote Gui: https://goo.gl/aRnxvw'
-  robot.hear /(kb dht)/i, (msg) ->
-    msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
-  robot.hear /(kb transdroid ru)/i, (msg) ->
-    msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
-  robot.hear /(kb (autodl|(-?irssi)))/i, (msg) ->
-    msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
-  robot.hear /(kb port)/i, (msg) ->
-    msg.send 'Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
-  robot.hear /(kb slow speeds)/i, (msg) ->
-    msg.send 'Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
-  robot.hear /(kb rutorrent errors)/i, (msg) ->
-    msg.send 'Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
-  robot.hear /(kb installing page)/i, (msg) ->
-    msg.send 'Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
-  robot.hear /(kb gs|kb getting started)/i, (msg) ->
-    msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
-  robot.hear /(kb (public|(.?html)))/i, (msg) ->
-    msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
-    msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
-  robot.hear /(kb ftp)/i, (msg) ->
-    msg.send 'Click here for instructions on setting up FTP: https://goo.gl/5toACz'
-    msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
-    msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
-  robot.hear /(kb (sftp|ssh))/i, (msg) ->
-    msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
+  robot.hear /(kb dht) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
+    else msg.send '@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
+      # ---
+  robot.hear /(kb transdroid ru) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
+    else msg.send '@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
+      # ---
+  robot.hear /(kb autodl) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
+    else msg.send '@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
+      # ---
+# --- Disabled as this has a matching Chat Trigger
+#  robot.hear /(kb port) ?(.*)/i, (msg) ->
+#    user = escape(msg.match[2])
+#    if user.length < 1
+#      msg.send 'Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
+#    else msg.send '@' + user + ' Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
+      # ---
+  robot.hear /(kb slow speeds) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
+    else
+      msg.send '@' + user + ' Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
+      # ---
+  robot.hear /(kb rutorrent errors) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
+    else
+      msg.send '@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
+      # ---
+  robot.hear /(kb installing page) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
+    else
+      msg.send '@' + user + ' Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
+      # ---
+  robot.hear /(kb gs|kb getting started) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
+    else
+      msg.send '@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
+      # ---
+  robot.hear /(kb public.?h?t?m?l?\b) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
+      msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
+    else
+      msg.send '@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
+      msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
+      # ---
+  robot.hear /(kb ftp) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Click here for instructions on setting up FTP: https://goo.gl/5toACz'
+      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
+      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
+    else
+      msg.send '@' + user + ' Click here for instructions on setting up FTP: https://goo.gl/5toACz'
+      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
+      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
+      # ---
+  robot.hear /(kb sftp|kb ssh) ?(.*)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
+    else
+      msg.send '@' + user + ' Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
+  # ---
   # App Store Links
   # ---
   robot.hear /(app plex)/i, (msg) ->
