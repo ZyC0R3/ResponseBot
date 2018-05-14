@@ -47,7 +47,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V4.1.0'
+    msg.send 'The current version of Responses that is loaded is V4.1.1'
   # ---
   # KB Responses with user Triggers
   # ---
