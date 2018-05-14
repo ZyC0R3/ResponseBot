@@ -180,16 +180,16 @@ module.exports = (robot) ->
   robot.hear /((raise).*ticket)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
-  robot.respond /(who made you)/i, (msg) ->
-  msg.send 'Zycore gave me life, Rid made me a real bot.'
+  robot.hear /(who made you)/i, (msg) ->
+    msg.send 'Zycore gave me life, Rid made me a real bot.'
   robot.hear /((disk).*(quota|full))/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' If you have filled your Disk Quota, some applications will not work/load. In this case you will need to delete some data from your account to be able to continue to use your services. If the Disk Quota is full then the FTP App cant write to its logs/pid files and hence this is not an option to achive this.'
     msg.send 'Use the file explorer on your https://www.appboxes.co/appboxmanager/appboxes page, click on the appbox that has the full Disk Quota then click \'File Explorer\' top right hand corner below the logout button.'
     msg.send 'This File Explorer is owned by a privileged user and access the filesystem outside of the container so will work regardless  if your disk is full or not. Once you have deleted data it may take up to 15 minutes for services to reload, restarting applicaiton during this time will not speed this process up.'
   robot.hear /((submit|raise) a?.*bug|issue tracker)/i, (msg) ->
-  username = msg.message.user.name
-		msg.send '@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
+    username = msg.message.user.name
+    msg.send '@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
 		robot.hear /(novnc)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' If you are trying to use NoVNC to connect to the BETA version of Ubuntu Desktop (VNC) then this will not work, there is a known bug for this and is currently under investigation. Please do not raise a ticket for this issues. Refer to the Issue Tracker for further information _(Type \'Issue Tracker\' for more info)_'
