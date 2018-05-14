@@ -243,10 +243,10 @@ module.exports = (robot) ->
   robot.hear /((submit|raise) a?.*bug|issue tracker)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
-		robot.hear /(novnc)/i, (msg) ->
-    username = msg.message.user.name
-    msg.send '@' + username + ' If you are trying to use NoVNC to connect to the BETA version of Ubuntu Desktop (VNC) then this will not work, there is a known bug for this and is currently under investigation. Please do not raise a ticket for this issues. Refer to the Issue Tracker for further information _(Type \'Issue Tracker\' for more info)_'
-    msg.send 'If your issue is unrelated to to this then please ask for support here, hola at an admin (if other users are not able to support) or rasie a ticket. _(Type \'Raise a Ticket\' for more info)_'
+#		robot.hear /(novnc)/i, (msg) ->
+#    username = msg.message.user.name
+#    msg.send '@' + username + ' If you are trying to use NoVNC to connect to the BETA version of Ubuntu Desktop (VNC) then this will not work, there is a known bug for this and is currently under investigation. Please do not raise a ticket for this issues. Refer to the Issue Tracker for further information _(Type \'Issue Tracker\' for more info)_'
+#    msg.send 'If your issue is unrelated to to this then please ask for support here, hola at an admin (if other users are not able to support) or rasie a ticket. _(Type \'Raise a Ticket\' for more info)_'
   # ---
   # Simple Troubleshooting
   # ---
