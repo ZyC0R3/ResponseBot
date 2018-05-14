@@ -147,11 +147,11 @@ module.exports = (robot) ->
     msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
   robot.hear /(app lets chat)/i, (msg) ->
     msg.send '*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
-  robot.hear /(app ubuntu (desktop|vnc|17))/i, (msg) ->
-    msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V17.10 Requires 5 app slot: https://www.appboxes.co/appstore/app/85'
-  robot.hear /(app ubuntu (beta|18))/i, (msg) ->
-    msg.send '*Ubuntu Desktop (VNC) BETA:* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
-    msg.send '*This is a BETA version:* This distribution has a known bug preventing NoVNC from working, please post any other issues on the bug tracker _(Type \'Raise a Bug\' for more info)_, *NOTE:* default username is \'appbox\' not root.'
+  robot.hear /(app ubuntu (desktop|vnc|18))/i, (msg) ->
+    msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+#  robot.hear /(app ubuntu (beta|18))/i, (msg) ->
+#    msg.send '*Ubuntu Desktop (VNC) BETA:* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+#    msg.send '*This is a BETA version:* This distribution has a known bug preventing NoVNC from working, please post any other issues on the bug tracker _(Type \'Raise a Bug\' for more info)_, *NOTE:* default username is \'appbox\' not root.'
   robot.hear /(app rutorrent)/i, (msg) ->
     msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-6 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   robot.hear /(app deluge)/i, (msg) ->
