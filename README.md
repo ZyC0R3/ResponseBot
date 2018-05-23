@@ -1,5 +1,5 @@
 # ResponseBot
-Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxes
+Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxCo
 
 ## Installation
 
@@ -20,18 +20,18 @@ Then add **responsebot** to your `external-scripts.json`:
 ## Usage
 
 ```
- KB = Knowledgebase Articles (Add users name to end of command to tag them in response)
- App = app "appname"
- APPCAT = appcat "category"
- TS = Troubleshooting Basics
- CL = Change Log for Updated Apps
+KB = Knowledgebase Articles (Add users name to end of command to tag them in response)
+App or App User = app "appname" "Target User"
+APPCAT = appcat "category"
+TS = Troubleshooting Basics
+CL = Change Log for Updated Apps
 ```
 
 ## Authors
 
 ```
- ZyC0R3
- Rid
+ZyC0R3
+Rid
 ```
 
 ## Change Log
@@ -51,4 +51,6 @@ V4.0.0 Cas we wanted a new number
 V4.0.1 Bug fixes
 V4.0.4 New Chat triggers added
 V4.1.0 Users can now be Tagged in commands for ResponseBot to target them for the reply
+V4.1.1 New Chat triggers added
+V4.1.2 Change log Updated, New apps added, SSH/SFTP responses disabled until updated
 ```
