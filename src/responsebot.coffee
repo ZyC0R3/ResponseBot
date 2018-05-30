@@ -258,7 +258,7 @@ module.exports = (robot) ->
     else
       msg.send '@' + user + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
   robot.hear /((raise).*ticket) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+    user = escape(msg.match[4])
     if user.length < 1
       msg.send 'Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
     else
