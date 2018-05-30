@@ -48,23 +48,23 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V4.1.2'
+    msg.send 'The current version of Responses that is loaded is V4.1.4'
   # ---
   # KB Responses with user Triggers
   # ---
-  robot.hear /(kb dht) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb dht) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
     else msg.send '@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
       # ---
-  robot.hear /(kb transdroid ru) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb transdroid ru) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
     else msg.send '@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
       # ---
-  robot.hear /(kb autodl) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb autodl) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
@@ -77,35 +77,35 @@ module.exports = (robot) ->
 #      msg.send 'Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
 #    else msg.send '@' + user + ' Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
       # ---
-  robot.hear /(kb slow speeds) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb slow speeds) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
     else
       msg.send '@' + user + ' Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
       # ---
-  robot.hear /(kb rutorrent errors) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb rutorrent errors) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
     else
       msg.send '@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
       # ---
-  robot.hear /(kb installing page) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb installing page) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
     else
       msg.send '@' + user + ' Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
       # ---
-  robot.hear /(kb gs|kb getting started) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb gs|kb getting started) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
     else
       msg.send '@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
       # ---
-  robot.hear /(kb public.?h?t?m?l?\b) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb public.?h?t?m?l?\b) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
@@ -114,7 +114,7 @@ module.exports = (robot) ->
       msg.send '@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
       msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
       # ---
-  robot.hear /(kb ftp) ?(@?)(.*)/i, (msg) ->
+  robot.hear /(kb ftp) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Click here for instructions on setting up FTP: https://goo.gl/5toACz'
@@ -125,7 +125,7 @@ module.exports = (robot) ->
 #      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
 #      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
       # ---
-#  robot.hear /(kb sftp|kb ssh) ?(@?)(.*)/i, (msg) ->
+#  robot.hear /(kb sftp|kb ssh) ?(@?)(.*\b)/i, (msg) ->
 #    user = escape(msg.match[3])
 #    if user.length < 1
 #      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
@@ -154,7 +154,7 @@ module.exports = (robot) ->
 #    msg.send '*Ubuntu Desktop (VNC) BETA:* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
 #    msg.send '*This is a BETA version:* This distribution has a known bug preventing NoVNC from working, please post any other issues on the bug tracker _(Type \'Raise a Bug\' for more info)_, *NOTE:* default username is \'appbox\' not root.'
   robot.hear /(app rutorrent)/i, (msg) ->
-    msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-8 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+    msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-10 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   robot.hear /(app deluge)/i, (msg) ->
     msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
   robot.hear /(app transmission)/i, (msg) ->
@@ -222,22 +222,27 @@ module.exports = (robot) ->
     # Regex Test - https://regex101.com/r/P3RoNG/2/tests
 #    username = msg.message.user.name
 #    msg.send '@' + username + ' I knew you was going to ask that: instruction on setting up SFTP: https://goo.gl/xMYSmy'
-  robot.hear /(504 \[error,getplugins\]|getplugins|error 504)/i, (msg) ->
+  robot.hear /(500 \[error,getplugins\])/i, (msg) ->
+    username = msg.message.user.name
+    msg.send '*STOP*, @' + username + ' Investigations are ongoing into the causes of this error, there is a Troubleshooting step you can take to try and resolve this, this has a varying level of success for different users'
+    msg.send 'It involves deleting unnecessary files from the rutorrent application folder, using FTP or any other file management method, navigate to `/apps/rutorrent.sample.appboxes.co/torrents/config/rutorrent/settings` and `/apps/rutorrent.sample.appboxes.co/torrents/config/rutorrent/users/sample/settings` and delete the folder called tasks, *MAKE SURE YOU ONLY DELETE THIS FOLDER AND NOTHING ELSE*'
+    msg.send 'If you still have this error after 30 mins please holla at an Admin or raise a ticket. _(Type `Raise a Ticket` for more info)_'
+  robot.hear /(504 \[error,getplugins\])/i, (msg) ->
     username = msg.message.user.name
     msg.send '*STOP*, @' + username + ' do not restart your application or refresh the page. ruTorrent is single threaded on its XMLRPC interface, this means it can not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.'
-    msg.send '_(Type \'Raise a Ticket\' for more info)_'
+    msg.send '_(Type `Raise a Ticket` for more info)_'
   robot.hear /(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, (msg) ->
     # Regex Test - https://regex101.com/r/Ne5pIs/5/tests
     username = msg.message.user.name
     msg.send '@' + username + ' When any update is performed the port that is assigned to that app can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps, If the port is a match however then please let us know in chat to make sure there is no other reason for this error.'
-    msg.send 'If this error is FTP or SFTP related please type \'ts ftp\' for further support'
+    msg.send 'If this error is FTP or SFTP related please type `ts ftp` for further support'
   robot.hear /(SSL_ERROR_BAD_CERT_DOMAIN)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' If this error is seen while using Firefox, although it directly relates to the appboxes.co website it is not an error with you accessing the page. This error is only produced on Firefox and means the app you are trying to install/update has not finished yet. If the same page is opened in Chrome or IE you would get the "Please Wait" landing page advising the same. Please do not raise a ticket for this reason, if however, you have been getting the "Please Wait" page for more than 30 mins holla at an admin or raise a ticket.'
-    msg.send '_(Type \'Raise a Ticket\' for more info)_'
-  robot.hear /((raise).*ticket)/i, (msg) ->
-    username = msg.message.user.name
-    msg.send '@' + username + ' Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
+    msg.send '_(Type `Raise a Ticket` for more info)_'
+#  robot.hear /((raise).*ticket)/i, (msg) ->
+#    username = msg.message.user.name
+#    msg.send '@' + username + ' Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
   robot.hear /(who made you)/i, (msg) ->
     msg.send 'Zycore gave me life, Rid made me a real bot.'
   robot.hear /((disk).*(quota|full))/i, (msg) ->
@@ -245,10 +250,14 @@ module.exports = (robot) ->
     msg.send '@' + username + ' If you have filled your Disk Quota, some applications will not work/load. In this case you will need to delete some data from your account to be able to continue to use your services. If the Disk Quota is full then the FTP App cant write to its logs/pid files and hence this is not an option to achive this.'
     msg.send 'Use the file explorer on your https://www.appboxes.co/appboxmanager/appboxes page, click on the appbox that has the full Disk Quota then click \'File Explorer\' top right hand corner below the logout button.'
     msg.send 'This File Explorer is owned by a privileged user and access the filesystem outside of the container so will work regardless  if your disk is full or not. Once you have deleted data it may take up to 15 minutes for services to reload, restarting applicaiton during this time will not speed this process up.'
-  robot.hear /((submit|raise) a?.*bug|issue tracker)/i, (msg) ->
-    username = msg.message.user.name
-    msg.send '@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
-  robot.hear /(raise a ticket here) ?(@?)(.*)/i, (msg) ->
+  robot.hear /((submit|raise) a?.*bug|issue tracker) ?(@?)(.*\b)/i, (msg) ->
+    user = escape(msg.match[4])
+    if user.length < 1
+      username = msg.message.user.name
+      msg.send '@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
+    else
+      msg.send '@' + user + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_'
+  robot.hear /((raise).*ticket) ?(@?)(.*\b)/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
       msg.send 'Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
@@ -266,14 +275,14 @@ module.exports = (robot) ->
     msg.send '1: Make sure the Port, Password, Username (For SFTP the username is: _root_) and Domain you are using is correct, Check here https://www.appboxes.co/appboxmanager/installedapps'
     msg.send '2: If the above does not work, and you are using FileZilla, remove the connection from connection manager and add it again.'
     msg.send '3: Try installing a second Pure-FTPd applicaiton on your AppBox, *DO NOT* remove the troubled instance, this is to test there is no other errors with your box or FTP globally.'
-#    msg.send '4: Last and only option is try SFTP _(Type \'kb sftp\' for support setting it up)_, if this fails too then please holla at an admin'
-    msg.send '4: Last and only option is to holla at an admin'    
+#    msg.send '4: Last and only option is try SFTP _(Type `kb sftp` for support setting it up)_, if this fails too then please holla at an admin'
+    msg.send '4: Last and only option is to holla at an admin'
   robot.hear /(ts rutorrent)/i, (msg) ->
     msg.send 'Quick Troubleshooting Tips for ruTorrent'
     msg.send '1: First thing, and most important, *DO NOT* uninsatll ruTorrent, ruTorrent is single threaded on its XMLRPC interface, this means it doesn\'t manage excessive commands simultaneously. Therefore, when doing any actions, do a small chunk, wait for them to finish, then continue.'
     msg.send '2: If after 15 mins (note large amounts of data/actions can take longer, be proportionate) restart your instance of ruTorrent here: https://www.appboxes.co/appboxmanager/installedapps.'
     msg.send '3: Next is a bit of common sense, read the last hour or so of chat, are the admins dealing with a known issue, has it been reported, are you the only one effected. If it is known, being dealt with and you are not alone *JUST BE PATIENT* it will be fixed soon.'
-    msg.send '4: If the first 3 dont help then please holla at an admin or raise a ticket. _(Type \'Raise a Ticket\' for more info)_'
+    msg.send '4: If the first 3 dont help then please holla at an admin or raise a ticket. _(Type `Raise a Ticket` for more info)_'
   # ---
   # Change log
   # This is more of a location to store known changes to applciations as they are updated, it however is not a complete chagne log.
@@ -297,7 +306,7 @@ module.exports = (robot) ->
     msg.send 'V18.04-1: Public release'
   return
 # ---
-# Script for AppBoxesCo use only V3.3
+# Script for AppBoxesCo use only V4.1.4
 # ZyC0R3 - Rid
 # ---
 # generated by js2coffee 2.2.0
