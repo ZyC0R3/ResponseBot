@@ -48,23 +48,23 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V4.1.4'
+    msg.send 'The current version of Responses that is loaded is V5.0.0'
   # ---
   # KB Responses with user Triggers
   # ---
-  robot.hear /(kb dht)  ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb dht) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
     else msg.send '@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
    # ---
-  robot.hear /(kb transdroid ru) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb transdroid ru) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
     else msg.send '@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
    # ---
-  robot.hear /(kb autodl) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb autodl) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
@@ -75,38 +75,38 @@ module.exports = (robot) ->
 #    user = escape(msg.match[2])
 #    if user.length < 1
 #      msg.send 'Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
-#    else 
+#    else
 #      msg.send '@' + user + ' Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
      # ---
-  robot.hear /(kb slow speeds) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb slow speeds) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
     else
       msg.send '@' + user + ' Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
     # ---
-  robot.hear /(kb rutorrent errors) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb rutorrent errors) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
     else
       msg.send '@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
      # ---
-  robot.hear /(kb installing page) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb installing page) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
     else
       msg.send '@' + user + ' Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
      # ---
-  robot.hear /(kb gs|kb getting started) ?(?:@(.*)|)/i, (msg) ->
-    user = escape(msg.match[2])
+  robot.hear /(kb (gs|getting started)) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[3])
     if user.length < 1
       msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
     else
       msg.send '@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
     # ---
-  robot.hear /(kb public.?h?t?m?l?\b) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb public.?h?t?m?l?\b) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
@@ -115,90 +115,177 @@ module.exports = (robot) ->
       msg.send '@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
       msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
     # ---
-  robot.hear /(kb ftp) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(kb ftp) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Click here for instructions on setting up FTP: https://goo.gl/5toACz'
-#      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
-#      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
     else
       msg.send '@' + user + ' Click here for instructions on setting up FTP: https://goo.gl/5toACz'
-#      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
-#      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
     # ---
-#  robot.hear /(kb sftp|kb ssh) ?(?:@(.*\b)|)/i, (msg) ->
-#    user = escape(msg.match[2])
-#    if user.length < 1
-#      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
-#    else
-#      msg.send '@' + user + ' Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
   # ---
   # App Store Links
   # ---
     # ---
-  robot.hear /(app plex) ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(app plex) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
-      msg.send '*Plex:* Organize your videos, music, and photos. VLatest Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
+      msg.send '*Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
     else
-      msg.send '@' + user + ' *Plex:* Organize your videos, music, and photos. VLatest Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
+      msg.send '@' + user + ' *Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
     # ---
-  robot.hear /(app wordpress)/i, (msg) ->
-    msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
-  robot.hear /(app ftp)/i, (msg) ->
-    msg.send '*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.36-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
-  robot.hear /(app (lamp|(.?stack)))/i, (msg) ->
-    msg.send '*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
-  robot.hear /(app mattermost)/i, (msg) ->
-    msg.send '*Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
-  robot.hear /(app rocket)/i, (msg) ->
-    msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
+  robot.hear /(app wordpress) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
+    else
+      msg.send '@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
     # ---
-  robot.hear /(app lets chat)  ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(app ftp) ?(?:@(\S*))?/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.36-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
+    else
+      msg.send '@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.36-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
+    # ---
+  robot.hear /(app (lamp(.?stack))) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[4])
+    if user.length < 1
+      msg.send '*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
+    else
+      msg.send '@' + user + ' *Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
+    # ---
+  robot.hear /(app mattermost) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
+    else
+      msg.send '@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
+    # ---
+  robot.hear /(app (rocket(.?chat))) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[4])
+    if user.length < 1
+      msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
+    else
+      msg.send '@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
+    # ---
+  robot.hear /(app lets chat) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[2])
     if user.length < 1
       msg.send '*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
     else
       msg.send '@' + user + ' *Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
      # ---
-  robot.hear /(app (ubuntu|vnc|ssh))  ?(?:@(.*)|)/i, (msg) ->
+  robot.hear /(app (ubuntu|vnc|ssh)) ?(?:@(\S*))/i, (msg) ->
     user = escape(msg.match[3])
     if user.length < 1
-      msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+      msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
     else
-      msg.send '@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'        
+      msg.send '@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
      # ---
-  robot.hear /(app rutorrent)/i, (msg) ->
-    msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-10 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
-  robot.hear /(app deluge)/i, (msg) ->
-    msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
-  robot.hear /(app transmission)/i, (msg) ->
-    msg.send '*Transmission:* Transmission is a BitTorrent client. V2.93 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
-  robot.hear /(app flood)/i, (msg) ->
-    msg.send '*Flood:* A modern web UI for rTorrent. V1.0.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
-#  robot.hear /(app (ubuntu server|ssh))/i, (msg) ->
-#    msg.send '*Ubuntu Server (SSH):* A simple SSH server. V17.10 Requires 5 app slot: https://www.appboxes.co/appstore/app/43'
-  robot.hear /(app vpn)/i, (msg) ->
-    msg.send '*VPN:* The Open Source VPN. V0.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
-  robot.hear /(app nextcloud)/i, (msg) ->
-    msg.send '*Nextcloud:* Nextcloud - Protecting your data. V13.0.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
-  robot.hear /(app madsonic)/i, (msg) ->
-    msg.send '*Madsonic:* Madsonic is a web-based media library. V6.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
-  robot.hear /(app ((resil+io|bt)|(.?sync)))/i, (msg) ->
-    # Regex Test - https://regex101.com/r/V9UhTd/1/tests
-    msg.send '*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
-  robot.hear /(app (mysql|mariadb))/i, (msg) ->
-    msg.send '*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
-  robot.hear /(app (nginx|php(7)?))/i, (msg) ->
-    msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75'
-  robot.hear /(app znc)/i, (msg) ->
-    msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
-  robot.hear /(app rapidleech)/i, (msg) ->
-    msg.send '*Rapidleech:* Rapid Leech is a free server transfer script. V2.43 Requires 1 app slot: https://www.appboxes.co/appstore/app/78'
-  robot.hear /(app seat)/i, (msg) ->
-    msg.send '*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V2.0.19 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
-  robot.hear /(app kodexplorer)/i, (msg) ->
-    msg.send '*kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+  robot.hear /(app rutorrent) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-16 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+    else
+      msg.send '@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-16 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+     # ---
+  robot.hear /(app deluge) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
+    else
+      msg.send '@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
+     # ---
+  robot.hear /(app transmission) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
+    else
+      msg.send '@' + user + ' *Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
+     # ---
+  robot.hear /(app flood) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
+    else
+      msg.send '@' + user + ' *Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
+     # ---
+  robot.hear /(app vpn) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*VPN:* The Open Source VPN. V0.1-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
+    else
+      msg.send '@' + user + ' *VPN:* The Open Source VPN. V0.1-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
+     # ---
+  robot.hear /(app nextcloud) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
+    else
+      msg.send '@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
+     # ---
+  robot.hear /(app madsonic) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Madsonic:* Madsonic is a web-based media library. V6.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
+    else
+      msg.send '@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
+     # ---
+  robot.hear /(app ((resil+io|bt.?sync))) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[4])
+    if user.length < 1
+      msg.send '*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
+    else
+      msg.send '@' + user + ' *Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
+     # ---
+  robot.hear /(app (mysql|mariadb)) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[3])
+    if user.length < 1
+      msg.send '*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
+    else
+      msg.send '@' + user + ' *MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
+     # ---
+  robot.hear /(app (nginx|php(7)?)) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75'
+    else
+      msg.send '@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75'
+     # ---
+  robot.hear /(app znc) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.6-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
+    else
+      msg.send '@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.6-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
+     # ---
+  robot.hear /(app rapidleech) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Rapidleech:* Rapid Leech is a free server transfer script. V2.43 Requires 1 app slot: https://www.appboxes.co/appstore/app/78'
+    else
+      msg.send '@' + user + ' *Rapidleech:* Rapid Leech is a free server transfer script. V2.43 Requires 1 app slot: https://www.appboxes.co/appstore/app/78'
+     # ---
+  robot.hear /(app seat) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V2.0.19 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
+    else
+      msg.send '@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V2.0.19 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
+     # ---
+  robot.hear /(app kodexplorer) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.25-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+    else
+      msg.send '@' + user + ' *kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.25-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+  robot.hear /(app gogs) ?(?:@(\S*))/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
+    else
+      msg.send '@' + user + ' *Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
+     # ---
   # ---
   # App Store Categories
   # ---
@@ -321,7 +408,7 @@ module.exports = (robot) ->
     msg.send 'V18.04-1: Public release'
   return
 # ---
-# Script for AppBoxesCo use only V4.1.4
+# Script for AppBoxesCo use only V5.0.0
 # ZyC0R3 - Rid
 # ---
 # generated by js2coffee 2.2.0
