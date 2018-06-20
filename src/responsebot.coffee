@@ -52,70 +52,71 @@ module.exports = (robot) ->
   # ---
   # KB Responses with user Triggers
   # ---
-  robot.hear /(kb dht) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+  robot.hear /(kb dht)  ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
     else msg.send '@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY'
-      # ---
-  robot.hear /(kb transdroid ru) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+   # ---
+  robot.hear /(kb transdroid ru) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
     else msg.send '@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk'
-      # ---
-  robot.hear /(kb autodl) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+   # ---
+  robot.hear /(kb autodl) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
     else msg.send '@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB'
-      # ---
+   # ---
 # --- Disabled as this has a matching Chat Trigger
-#  robot.hear /(kb port) ?(.*)/i, (msg) ->
+#  robot.hear /(kb port) ?(?:@(.*)|)/i, (msg) ->
 #    user = escape(msg.match[2])
 #    if user.length < 1
 #      msg.send 'Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
-#    else msg.send '@' + user + ' Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
-      # ---
-  robot.hear /(kb slow speeds) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+#    else 
+#      msg.send '@' + user + ' Please update the app and the relevant port will be shown. If no update is available then please let us know in chat to make sure there is no other reason you are missing the port'
+     # ---
+  robot.hear /(kb slow speeds) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
     else
       msg.send '@' + user + ' Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf'
-      # ---
-  robot.hear /(kb rutorrent errors) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+    # ---
+  robot.hear /(kb rutorrent errors) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
     else
       msg.send '@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh'
-      # ---
-  robot.hear /(kb installing page) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+     # ---
+  robot.hear /(kb installing page) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
     else
       msg.send '@' + user + ' Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi'
-      # ---
-  robot.hear /(kb gs|kb getting started) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+     # ---
+  robot.hear /(kb gs|kb getting started) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
     else
       msg.send '@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi'
-      # ---
-  robot.hear /(kb public.?h?t?m?l?\b) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+    # ---
+  robot.hear /(kb public.?h?t?m?l?\b) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
       msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
     else
       msg.send '@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s'
       msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
-      # ---
-  robot.hear /(kb ftp) ?(@?)(.*\b)/i, (msg) ->
-    user = escape(msg.match[3])
+    # ---
+  robot.hear /(kb ftp) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
     if user.length < 1
       msg.send 'Click here for instructions on setting up FTP: https://goo.gl/5toACz'
 #      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
@@ -124,9 +125,9 @@ module.exports = (robot) ->
       msg.send '@' + user + ' Click here for instructions on setting up FTP: https://goo.gl/5toACz'
 #      msg.send 'And because i\'m an all-knowing Bot, so I know you are going to ask at some point'
 #      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
-      # ---
-#  robot.hear /(kb sftp|kb ssh) ?(@?)(.*\b)/i, (msg) ->
-#    user = escape(msg.match[3])
+    # ---
+#  robot.hear /(kb sftp|kb ssh) ?(?:@(.*\b)|)/i, (msg) ->
+#    user = escape(msg.match[2])
 #    if user.length < 1
 #      msg.send 'Click here for instructions on setting up SFTP: https://goo.gl/xMYSmy'
 #    else
@@ -134,8 +135,14 @@ module.exports = (robot) ->
   # ---
   # App Store Links
   # ---
-  robot.hear /(app plex)/i, (msg) ->
-    msg.send '*Plex:* Organize your videos, music, and photos. VLatest Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
+    # ---
+  robot.hear /(app plex) ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Plex:* Organize your videos, music, and photos. VLatest Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
+    else
+      msg.send '@' + user + ' *Plex:* Organize your videos, music, and photos. VLatest Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
+    # ---
   robot.hear /(app wordpress)/i, (msg) ->
     msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
   robot.hear /(app ftp)/i, (msg) ->
@@ -146,13 +153,21 @@ module.exports = (robot) ->
     msg.send '*Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
   robot.hear /(app rocket)/i, (msg) ->
     msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
-  robot.hear /(app lets chat)/i, (msg) ->
-    msg.send '*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
-  robot.hear /(app (ubuntu (desktop|vnc|18)|ssh))/i, (msg) ->
-    msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
-#  robot.hear /(app ubuntu (beta|18))/i, (msg) ->
-#    msg.send '*Ubuntu Desktop (VNC) BETA:* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
-#    msg.send '*This is a BETA version:* This distribution has a known bug preventing NoVNC from working, please post any other issues on the bug tracker _(Type \'Raise a Bug\' for more info)_, *NOTE:* default username is \'appbox\' not root.'
+    # ---
+  robot.hear /(app lets chat)  ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[2])
+    if user.length < 1
+      msg.send '*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
+    else
+      msg.send '@' + user + ' *Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88'
+     # ---
+  robot.hear /(app (ubuntu|vnc|ssh))  ?(?:@(.*)|)/i, (msg) ->
+    user = escape(msg.match[3])
+    if user.length < 1
+      msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+    else
+      msg.send '@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'        
+     # ---
   robot.hear /(app rutorrent)/i, (msg) ->
     msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-10 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   robot.hear /(app deluge)/i, (msg) ->
@@ -209,12 +224,12 @@ module.exports = (robot) ->
   # ---
   # Chat Triggers
   # ---
-  robot.hear /((tor+ent).*(\bmov(e|ing))|((\bmov(e|ing)).*(tor+ent)))/i, (msg) ->
+#  robot.hear /((tor+ent).*(\bmov(e|ing))|((\bmov(e|ing)).*(tor+ent)))/i, (msg) ->
     # \b Prevents words such as remove and removing from trriggering command.
     # + Added to allow for spelling mistakes.
     # Regex Test - https://regex101.com/r/nqiEhu/2/tests
-    username = msg.message.user.name
-    msg.send 'We\'ve recently issued an automated ruTorrent update which reset user setting for Autotools, this means automove has been disbaled, torrents will no longer be automatically moved from /torrents/downloading. You can turn this feature back on in ruTorrent via Settings > Autotools, and then tick "Enable AutoMove" and set your own location. This will be the last time we\'ll be overriding this via an update, so your setting will stick in future. Appologies once again. @' + username
+#    username = msg.message.user.name
+#    msg.send 'We\'ve recently issued an automated ruTorrent update which reset user setting for Autotools, this means automove has been disbaled, torrents will no longer be automatically moved from /torrents/downloading. You can turn this feature back on in ruTorrent via Settings > Autotools, and then tick "Enable AutoMove" and set your own location. This will be the last time we\'ll be overriding this via an update, so your setting will stick in future. Appologies once again. @' + username
   robot.hear /(%PORTS|100EXTERNAL%)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port'
