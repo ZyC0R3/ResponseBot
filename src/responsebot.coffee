@@ -154,7 +154,7 @@ module.exports = (robot) ->
 #    msg.send '*Ubuntu Desktop (VNC) BETA:* This install includes VNC, SSH & Various Apps. V18.04 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
 #    msg.send '*This is a BETA version:* This distribution has a known bug preventing NoVNC from working, please post any other issues on the bug tracker _(Type \'Raise a Bug\' for more info)_, *NOTE:* default username is \'appbox\' not root.'
   robot.hear /(app rutorrent)/i, (msg) ->
-    msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-10 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+    msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-16 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   robot.hear /(app deluge)/i, (msg) ->
     msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
   robot.hear /(app transmission)/i, (msg) ->
