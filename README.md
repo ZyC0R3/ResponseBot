@@ -54,4 +54,6 @@ V4.1.0 Users can now be Tagged in commands for ResponseBot to target them for th
 V4.1.1 New Chat triggers added
 V4.1.2 Change log Updated, New apps added, SSH/SFTP responses disabled until updated
 V4.1.4 Code Fixes
+V5.0.0 Code Overhaul & Fixes
+V5.0.1 Code Fixes
 ```
