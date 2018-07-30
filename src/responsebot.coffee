@@ -335,11 +335,11 @@ module.exports = (robot) ->
     msg.send '*STOP*, @' + username + ' do not restart your application or refresh the page. ruTorrent is single threaded on its XMLRPC interface, this means it can not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.'
     msg.send '_(Type `Raise a Ticket` for more info)_'
   # ---
-  robot.hear /(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, (msg) ->
+  #robot.hear /(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, (msg) ->
     # Regex Test - https://regex101.com/r/Ne5pIs/5/tests
-    username = msg.message.user.name
-    msg.send '@' + username + ' When any update is performed the port that is assigned to that app can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps, If the port is a match however then please let us know in chat to make sure there is no other reason for this error.'
-    msg.send 'If this error is FTP or SFTP related please type `ts ftp` for further support'
+  #  username = msg.message.user.name
+   # msg.send '@' + username + ' When any update is performed the port that is assigned to that app can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps, If the port is a match however then please let us know in chat to make sure there is no other reason for this error.'
+  #  msg.send 'If this error is FTP or SFTP related please type `ts ftp` for further support'
   # ---
   robot.hear /(SSL_ERROR_BAD_CERT_DOMAIN)/i, (msg) ->
     username = msg.message.user.name
