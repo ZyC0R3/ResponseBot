@@ -56,4 +56,5 @@ V4.1.2 Change log Updated, New apps added, SSH/SFTP responses disabled until upd
 V4.1.4 Code Fixes
 V5.0.0 Code Overhaul & Fixes
 V5.0.1 Code Fixes
+V5.0.2 NPM Update and Code Changes
 ```
