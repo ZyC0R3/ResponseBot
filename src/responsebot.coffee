@@ -65,7 +65,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of Responses that is loaded is V5.0.3'
+    msg.send 'The current version of Responses that is loaded is CS V5.0.4'
   # ---
   # KB Responses with user Triggers
   # ---
@@ -143,9 +143,9 @@ module.exports = (robot) ->
   robot.hear /(app wordpress) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
     if user == "undefined"
-      msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
+      msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
     else
-      msg.send '@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
+      msg.send '@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
   # ---
   robot.hear /(app ftp) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
@@ -192,9 +192,9 @@ module.exports = (robot) ->
   robot.hear /(app rutorrent) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
     if user == "undefined"
-      msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-16 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+      msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-18 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
     else
-      msg.send '@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-16 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+      msg.send '@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-18 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
   # ---
   robot.hear /(app deluge) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
@@ -255,9 +255,9 @@ module.exports = (robot) ->
   robot.hear /(app (nginx|php(7)?)) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
     if user == "undefined"
-      msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75'
+      msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
     else
-      msg.send '@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75'
+      msg.send '@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
   # ---
   robot.hear /(app znc) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
@@ -283,15 +283,37 @@ module.exports = (robot) ->
   robot.hear /(app kodexplorer) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
     if user == "undefined"
-      msg.send '*kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.25-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+      msg.send '*kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
     else
-      msg.send '@' + user + ' *kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.25-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+      msg.send '@' + user + ' *kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+  # ---
   robot.hear /(app gogs) ?(?:@(\w*))?/i, (msg) ->
     user = escape(msg.match[2])
     if user == "undefined"
       msg.send '*Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
     else
       msg.send '@' + user + ' *Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
+   # ---
+    robot.hear /(app serposcope) ?(?:@(\w*))?/i, (msg) ->
+      user = escape(msg.match[2])
+      if user == "undefined"
+        msg.send '*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
+      else
+        msg.send '@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
+   # ---
+    robot.hear /(app fathom) ?(?:@(\w*))?/i, (msg) ->
+      user = escape(msg.match[2])
+      if user == "undefined"
+        msg.send '*Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113'
+      else
+        msg.send '@' + user + ' *Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113'
+   # ---
+    robot.hear /(app lemp) ?(?:@(\w*))?/i, (msg) ->
+      user = escape(msg.match[2])
+      if user == "undefined"
+        msg.send '*Lemp Stack:* LEMP is a group of open-source software which enable a server to host dynamic websites and web applications. V1.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/112'
+      else
+        msg.send '@' + user + ' *Lemp Stack:* LEMP is a group of open-source software which enable a server to host dynamic websites and web applications. V1.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/112'
   # ---
   # App Store Categories
   # ---
@@ -335,12 +357,6 @@ module.exports = (robot) ->
     msg.send '*STOP*, @' + username + ' do not restart your application or refresh the page. ruTorrent is single threaded on its XMLRPC interface, this means it can not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.'
     msg.send '_(Type `Raise a Ticket` for more info)_'
   # ---
-  #robot.hear /(actively refused|(i|s?ftp) (can.?t connect(.*to s?ftp))|connection refused|ECONNREFUSED|(((s?ftp).*(port))|((port).*(s?ftp)))|s?ftp.*not.*working)/i, (msg) ->
-    # Regex Test - https://regex101.com/r/Ne5pIs/5/tests
-  #  username = msg.message.user.name
-   # msg.send '@' + username + ' When any update is performed the port that is assigned to that app can sometimes be changed, First point of call is for you to check the port you are using is the correct port on your app settings page, click here to login and check: https://www.appboxes.co/appboxmanager/installedapps, If the port is a match however then please let us know in chat to make sure there is no other reason for this error.'
-  #  msg.send 'If this error is FTP or SFTP related please type `ts ftp` for further support'
-  # ---
   robot.hear /(SSL_ERROR_BAD_CERT_DOMAIN)/i, (msg) ->
     username = msg.message.user.name
     msg.send '@' + username + ' If this error is seen while using Firefox, although it directly relates to the appboxes.co website it is not an error with you accessing the page. This error is only produced on Firefox and means the app you are trying to install/update has not finished yet. If the same page is opened in Chrome or IE you would get the "Please Wait" landing page advising the same. Please do not raise a ticket for this reason, if however, you have been getting the "Please Wait" page for more than 30 mins holla at an admin or raise a ticket.'
@@ -369,10 +385,6 @@ module.exports = (robot) ->
       msg.send 'Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
     else
       msg.send '@' + user + ' Tickets can be raised on the existing support system at: https://billing.seedboxes.co/supporttickets.php'
-#		robot.hear /(novnc)/i, (msg) ->
-#    username = msg.message.user.name
-#    msg.send '@' + username + ' If you are trying to use NoVNC to connect to the BETA version of Ubuntu Desktop (VNC) then this will not work, there is a known bug for this and is currently under investigation. Please do not raise a ticket for this issues. Refer to the Issue Tracker for further information _(Type \'Issue Tracker\' for more info)_'
-#    msg.send 'If your issue is unrelated to to this then please ask for support here, hola at an admin (if other users are not able to support) or rasie a ticket. _(Type \'Raise a Ticket\' for more info)_'
   # ---
   # Simple Troubleshooting
   # ---
@@ -381,7 +393,6 @@ module.exports = (robot) ->
     msg.send '1: Make sure the Port, Password, Username (For SFTP the username is: _root_) and Domain you are using is correct, Check here https://www.appboxes.co/appboxmanager/installedapps'
     msg.send '2: If the above does not work, and you are using FileZilla, remove the connection from connection manager and add it again.'
     msg.send '3: Try installing a second Pure-FTPd applicaiton on your AppBox, *DO NOT* remove the troubled instance, this is to test there is no other errors with your box or FTP globally.'
-#    msg.send '4: Last and only option is try SFTP _(Type `kb sftp` for support setting it up)_, if this fails too then please holla at an admin'
     msg.send '4: Last and only option is to holla at an admin'
   robot.hear /(ts rutorrent)/i, (msg) ->
     msg.send 'Quick Troubleshooting Tips for ruTorrent'
@@ -389,31 +400,7 @@ module.exports = (robot) ->
     msg.send '2: If after 15 mins (note large amounts of data/actions can take longer, be proportionate) restart your instance of ruTorrent here: https://www.appboxes.co/appboxmanager/installedapps.'
     msg.send '3: Next is a bit of common sense, read the last hour or so of chat, are the admins dealing with a known issue, has it been reported, are you the only one effected. If it is known, being dealt with and you are not alone *JUST BE PATIENT* it will be fixed soon.'
     msg.send '4: If the first 3 dont help then please holla at an admin or raise a ticket. _(Type `Raise a Ticket` for more info)_'
-  # ---
-  # Change log
-  # This is more of a location to store known changes to applciations as they are updated, it however is not a complete chagne log.
-  # ---
-  robot.hear /(cl rutorrent)/i, (msg) ->
-    msg.send 'V3.8-2: Added ffmpeg'
-    msg.send 'V3.8-3: Various fixes & stability improvements'
-    msg.send 'V3.8-4: Performance updates, Fixed GeoIP, made /home viewable and added proxy settings to nginx'
-    msg.send 'V3.8-5: Adjusted settings and timeout'
-    msg.send 'V3.8-6: A Legacy file from a old version was overriding user settings and preventing seeding of torrents, this was removed.'
-    msg.send 'V3.8-7: No changes to applcaiton files or settings, port mapping issue fixed'
-    msg.send 'V3.8-8: Update which should fix any getplugins 504 timeout issues, however this is not gospel'
-  robot.hear /(cl (cute|.?ftp(d)?))/i, (msg) ->
-    msg.send 'V1.0.36-1: Raise number of concurrent connections'
-    msg.send 'V1.0.36-2: Bug Fixes'
-    msg.send 'V1.0.36-3: Multi-User support feature added'
-  robot.hear /(cl deluge)/i, (msg) ->
-    msg.send 'V1.3.5-1: Public release'
-    msg.send 'V1.3.5-2: Fixed an issue where only 3 torrents would work simultaneously.'
-  robot.hear /(cl ubuntu)/i, (msg) ->
-    msg.send 'V18.04-1: Public release'
-  return
 # ---
-# Script for AppBoxesCo use only V5.0.3
+# Script for AppBoxesCo use only CS V5.0.4
 # ZyC0R3 - Rid
-# ---
-# generated by js2coffee 2.2.0
 # ---
