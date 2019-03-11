@@ -60,4 +60,5 @@ V5.0.2 NPM Update and Code Changes
 V5.0.3 NPM Update and Code Changes
 V5.0.4 Phased out CoffeeScript File and added a JS File.
 V5.0.5 Test push
+V5.1.0 npm Update Patch and Minor Version. 
 ```

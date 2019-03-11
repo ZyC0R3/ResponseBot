@@ -1,6 +1,6 @@
 {
   "name": "responsebot",
-  "version": "5.0.5",
+  "version": "5.1.0",
   "description": "Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxCo",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/ZyC0R3/ResponseBot/issues"
   },
-  "homepage": "https://github.com/ZyC0R3/ResponseBot#readme"
+  "homepage": "https://github.com/ZyC0R3/ResponseBot#readme",
+  "dependencies": {}
 }
