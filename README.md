@@ -61,5 +61,6 @@ V5.0.3 NPM Update and Code Changes
 V5.0.4 Phased out CoffeeScript File and added a JS File.
 V5.0.5 Test push
 V5.1.0 npm Update Patch and Minor Version.
-V6.0.0 Added Reload script.
+V6.0.0 Integrated  Reload script. (https://www.npmjs.com/package/hubot-reload)
+V6.0.1 Version control on updates for apps and chat triggers added for new apps.
 ```

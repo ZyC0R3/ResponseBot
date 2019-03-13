@@ -65,7 +65,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of Responses that is loaded is JS V6.0.0');
+    return msg.send('The current version of Responses that is loaded is JS V6.0.1');
   });
   // ---
   // KB Responses with user Triggers
@@ -188,9 +188,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.36-5 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
+      return msg.send('*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
     } else {
-      return msg.send('@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.36-5 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
+      return msg.send('@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
     }
   });
   // ---
@@ -224,23 +224,23 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(app lets chat) ?(?:@(\w*))?/i, function(msg) {
-    var user;
-    user = escape(msg.match[2]);
-    if (user === "undefined") {
-      return msg.send('*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
-    } else {
-      return msg.send('@' + user + ' *Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
-    }
-  });
+  //robot.hear(/(app lets chat) ?(?:@(\w*))?/i, function(msg) {
+  //  var user;
+  //  user = escape(msg.match[2]);
+  //  if (user === "undefined") {
+  //    return msg.send('*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
+  //  } else {
+  //    return msg.send('@' + user + ' *Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
+  //  }
+  //});
   // ---
   robot.hear(/(app (ubuntu|vnc|ssh)) ?(?:@(\w*))?/i, function(msg) {
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
-      return msg.send('*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-2 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
+      return msg.send('*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
     } else {
-      return msg.send('@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-2 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
+      return msg.send('@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
     }
   });
   // ---
@@ -288,9 +288,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*VPN:* The Open Source VPN. V0.1-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
+      return msg.send('*VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
     } else {
-      return msg.send('@' + user + ' *VPN:* The Open Source VPN. V0.1-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
+      return msg.send('@' + user + ' *VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
     }
   });
   // ---
@@ -308,9 +308,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Madsonic:* Madsonic is a web-based media library. V6.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
+      return msg.send('*Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
     } else {
-      return msg.send('@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
+      return msg.send('@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
     }
   });
   // ---
@@ -348,9 +348,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*ZNC:* ZNC is an IRC network bouncer or BNC. V1.6-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
+      return msg.send('*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
     } else {
-      return msg.send('@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.6-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
+      return msg.send('@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
     }
   });
   // ---
@@ -368,9 +368,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V2.0.19 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
+      return msg.send('*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
     } else {
-      return msg.send('@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V2.0.19 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
+      return msg.send('@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
     }
   });
   // ---
@@ -378,9 +378,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
+      return msg.send('*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
     } else {
-      return msg.send('@' + user + ' *kODExplorer:* A web based file manager,web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
+      return msg.send('@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
     }
   });
   // ---
@@ -404,15 +404,15 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(app fathom) ?(?:@(\w*))?/i, function(msg) {
-    var user;
-    user = escape(msg.match[2]);
-    if (user === "undefined") {
-      return msg.send('*Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113');
-    } else {
-      return msg.send('@' + user + ' *Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113');
-    }
-  });
+  //robot.hear(/(app fathom) ?(?:@(\w*))?/i, function(msg) {
+  //  var user;
+  //  user = escape(msg.match[2]);
+  //  if (user === "undefined") {
+  //    return msg.send('*Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113');
+  //  } else {
+  //    return msg.send('@' + user + ' *Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113');
+  //  }
+  //});
   // ---
   robot.hear(/(app lemp) ?(?:@(\w*))?/i, function(msg) {
     var user;
@@ -424,34 +424,75 @@ module.exports = function(robot) {
     }
   });
   // ---
+  robot.hear(/(app teamspeak) ?(?:@(\w*))?/i, function(msg) {
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
+    } else {
+      return msg.send('@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
+    }
+  });
+  // ---
+  robot.hear(/(app filerun) ?(?:@(\w*))?/i, function(msg) {
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
+    } else {
+      return msg.send('@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
+    }
+  });
+  // ---
+  robot.hear(/(app (minecraft|mc)) ?(?:@(\w*))?/i, function(msg) {
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117');
+    } else {
+      return msg.send('@' + user + ' *Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117');
+    }
+  });
+  // ---
+  robot.hear(/(app gitlab) ?(?:@(\w*))?/i, function(msg) {
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
+    } else {
+      return msg.send('@' + user + ' *GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
+    }
+  });
+  // ---
   // App Store Categories
+  // Major Work Needed, Out of Date.
   // ---
-  robot.hear(/(appcat chat)/i, function(msg) {
-    msg.send('*This is a list of applications that are categorised as Chat applications*');
-    msg.send('*Mattermost:* V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
-    msg.send('*Rocket Chat:* V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
-    return msg.send('*Lets Chat:* V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
-  });
+  //robot.hear(/(appcat chat)/i, function(msg) {
+  //  msg.send('*This is a list of applications that are categorised as Chat applications*');
+  //  msg.send('*Mattermost:* V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
+  //  msg.send('*Rocket Chat:* V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
+  //  return msg.send('*Lets Chat:* V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
+  //});
   // ---
-  robot.hear(/(appcat (torrent|.?clients))/i, function(msg) {
-    msg.send('*This is a list of applications that are categorised as Torrent Clients*');
-    msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-8 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
-    msg.send('*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
-    msg.send('*Transmission:* Transmission is a BitTorrent client. V2.93 Requires 1 app slot: https://www.appboxes.co/appstore/app/77');
-    return msg.send('*Flood:* A modern web UI for rTorrent. V1.0.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/82');
-  });
+  //robot.hear(/(appcat (torrent|.?clients))/i, function(msg) {
+  //  msg.send('*This is a list of applications that are categorised as Torrent Clients*');
+  //  msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-8 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
+  //  msg.send('*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
+  //  msg.send('*Transmission:* Transmission is a BitTorrent client. V2.93 Requires 1 app slot: https://www.appboxes.co/appstore/app/77');
+  //  return msg.send('*Flood:* A modern web UI for rTorrent. V1.0.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/82');
+  //});
   // ---
-  robot.hear(/(appcat webserver)/i, function(msg) {
-    msg.send('*This is a list of applications that are categorised as Webservers*');
-    msg.send('*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75');
-    return msg.send('*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96');
-  });
+  //robot.hear(/(appcat webserver)/i, function(msg) {
+  //  msg.send('*This is a list of applications that are categorised as Webservers*');
+  //  msg.send('*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.13.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/75');
+  //  return msg.send('*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96');
+  //});
   // ---
-  robot.hear(/(appcat (cloud|sync))/i, function(msg) {
-    msg.send('*This is a list of applications that are categorised under Sync*');
-    msg.send('*Resilio Sync:* Have Your Files Anywhere,Sync to all your devices. V2.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/73');
-    return msg.send('*Nextcloud:* Nextcloud - Protecting your data. V13.0.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
-  });
+  //robot.hear(/(appcat (cloud|sync))/i, function(msg) {
+  //  msg.send('*This is a list of applications that are categorised under Sync*');
+  //  msg.send('*Resilio Sync:* Have Your Files Anywhere,Sync to all your devices. V2.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/73');
+  //  return msg.send('*Nextcloud:* Nextcloud - Protecting your data. V13.0.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
+  //});
   // ---
   // Chat Triggers
   // ---
@@ -536,6 +577,6 @@ module.exports = function(robot) {
 };
 
 // ---
-// Script for AppBoxesCo use only JS V6.0.0
+// Script for AppBoxesCo use only JS V6.0.1
 // ZyC0R3 - Rid
 // ---
