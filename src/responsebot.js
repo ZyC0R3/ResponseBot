@@ -65,7 +65,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of Responses that is loaded is JS V5.1.0, A New Dawn.');
+    return msg.send('The current version of Responses that is loaded is JS V6.0.0');
   });
   // ---
   // KB Responses with user Triggers
@@ -536,6 +536,6 @@ module.exports = function(robot) {
 };
 
 // ---
-// Script for AppBoxesCo use only JS V5.1.0
+// Script for AppBoxesCo use only JS V6.0.0
 // ZyC0R3 - Rid
 // ---
