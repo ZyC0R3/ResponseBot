@@ -15,6 +15,7 @@
 //  APPCAT = appcat "category"
 //  TS = Troubleshooting Basics
 //  CL = Change Log for Updated Apps
+//  [Botname] Reload = Reload script without having to restart Hubot
 //
 // Author:
 //  ZyC0R3
@@ -87,6 +88,16 @@ module.exports = function(robot) {
       return msg.send('Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk');
     } else {
       return msg.send('@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk');
+    }
+  });
+  // ---
+  robot.hear(/(kb transdroid deluge) ?(?:@(\w*))?/i, function(msg) {
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://goo.gl/tEPYtt');
+    } else {
+      return msg.send('@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://goo.gl/tEPYtt');
     }
   });
   // ---
@@ -500,6 +511,12 @@ module.exports = function(robot) {
     var username;
     username = msg.message.user.name;
     return msg.send('@' + username + ' Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port');
+  });
+  // ---
+  robot.hear(/(https:\/\/<username>.appboxes.co,)/i, function(msg) {
+    var username;
+    username = msg.message.user.name;
+    return msg.send('@' + username + ' Apologies you are having some issues with installing your app, If you have been seeing this error for longer than 45 Mins please let me know.');
   });
   // ---
   robot.hear(/(500 \[error,getplugins\])/i, function(msg) {
