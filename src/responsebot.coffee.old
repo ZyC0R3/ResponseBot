@@ -66,6 +66,7 @@ module.exports = (robot) ->
   # ---
   robot.hear /(what vaur)/i, (msg) ->
     msg.send 'The current version of Responses that is loaded is CS V5.0.4'
+    msg.send 'If you are seeing this message you have broken something, Please try again. '
   # ---
   # KB Responses with user Triggers
   # ---
