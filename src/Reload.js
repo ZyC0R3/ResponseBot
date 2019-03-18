@@ -28,7 +28,7 @@ oldListeners = null;
 module.exports = function(robot) {
   var deleteScriptCache, reloadAllScripts, success, walkSync;
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of Reload that is loaded is JS V1.0');
+    return msg.send('The current version of Reload that is loaded is JS V1.0.1');
   });
   robot.respond(/reload/i, {
     id: 'reload-scripts.reload'
