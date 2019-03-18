@@ -66,7 +66,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of Responses that is loaded is JS V6.0.1');
+    return msg.send('The current version of ResponseBot that is loaded is JS V6.0.2');
   });
   // ---
   // KB Responses with user Triggers
