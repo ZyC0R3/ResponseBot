@@ -81,6 +81,7 @@ V1.0.5 Beta Testing
 This script is not owned or maintained by the creator of ResponseBot, For further information please see :https://www.npmjs.com/package/hubot-reload
 V1.0.0 Initial Testing and Troubleshooting
 V1.0.1 Public Release
+V1.0.2 Patch Fix for NPM
 ```
 ## Responsebot.coffee.old
 ```
