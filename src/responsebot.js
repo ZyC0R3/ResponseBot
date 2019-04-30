@@ -30,26 +30,6 @@ mornings = ['Good morning, %', 'Good morning to you too, %', 'Good day, %', 'Goo
 
 module.exports = function(robot) {
   // ---
-  // --- Test Code for User VAR as it breaks every update
-  // ---
-  robot.hear(/(app code) ?(?:@(\w*))?/i, function(msg) {
-    var user;
-    user = escape(msg.match[2]);
-    if (user === void 0) {
-      return msg.send(' *user == undefined* ' + user);
-    } else if (user === "undefined") {
-      return msg.send(' *user == "undefined"* ' + user);
-    } else if (user === "undefined") {
-      return msg.send(' Not undefined @' + user);
-    } else if (user === 0) {
-      return msg.send(' 0 ' + user);
-    } else if (user === null) {
-      return msg.send(' null' + user);
-    } else {
-      return msg.send(' Non Valid @' + user);
-    }
-  });
-  // ---
   // Hello and Good Morning, Author marioBonales, Edited for further use.
   // ---
   robot.hear(/(hello|good( [d'])?ay(e)?)/i, function(msg) {
@@ -66,114 +46,126 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V6.0.4');
+    return msg.send('The current version of ResponseBot that is loaded is JS V6.0.5');
   });
   // ---
   // KB Responses with user Triggers
+  // Google Links has been depreciated so the links have been replaced with Bit.ly Links.
   // ---
   robot.hear(/(kb dht) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/180/DHT-Enable-or-Disable-.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY');
+      return msg.send('Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2IR1ADn');
     } else {
-      return msg.send('@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://goo.gl/gUjeXY');
+      return msg.send('@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2IR1ADn');
     }
   });
   // ---
   robot.hear(/(kb transdroid ru) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/166/ruTorrent-and-Transdroid.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk');
+      return msg.send('Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/2PEY53c');
     } else {
-      return msg.send('@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://goo.gl/6kpGYk');
+      return msg.send('@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/2PEY53c');
     }
   });
   // ---
   robot.hear(/(kb transdroid deluge) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.appboxes.co/index.php?rp=/knowledgebase/207/Deluge-and-Transdroid.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://goo.gl/tEPYtt');
+      return msg.send('Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2GYwkPx');
     } else {
-      return msg.send('@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://goo.gl/tEPYtt');
+      return msg.send('@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2GYwkPx');
     }
   });
   // ---
   robot.hear(/(kb autodl) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/171/Autodl-irssi-An-Introduction.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB');
+      return msg.send('Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/2PCA4d5');
     } else {
-      return msg.send('@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://goo.gl/jJz5qB');
+      return msg.send('@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/2PCA4d5');
     }
   });
   // ---
   robot.hear(/(kb slow speeds) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/177/Slow-Speeds.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf');
+      return msg.send('Before you open a ticket or complain something is broken read this: https://bit.ly/2UTkRFv');
     } else {
-      return msg.send('@' + user + ' Before you open a ticket or complain something is broken read this: https://goo.gl/bpmBVf');
+      return msg.send('@' + user + ' Before you open a ticket or complain something is broken read this: https://bit.ly/2UTkRFv');
     }
   });
   // ---
   robot.hear(/(kb rutorrent errors) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/176/ruTorrent-Errors-and-Issues.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh');
+      return msg.send('Check out this page on known and common ruTorrent issues and errors: https://bit.ly/2Whgdmn');
     } else {
-      return msg.send('@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://goo.gl/RHouqh');
+      return msg.send('@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://bit.ly/2Whgdmn');
     }
   });
   // ---
   robot.hear(/(kb installing page) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/154/My-app-wont-install-I-am-stuck-on-the-installing-page.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi');
+      return msg.send('Stuck on the installing page, have a quick read: https://bit.ly/2V2xP97');
     } else {
-      return msg.send('@' + user + ' Stuck on the installing page, have a quick read: https://goo.gl/n3qeWi');
+      return msg.send('@' + user + ' Stuck on the installing page, have a quick read: https://bit.ly/2V2xP97');
     }
   });
   // ---
   robot.hear(/(kb (gs|getting started)) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/31/Getting-Started
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
-      return msg.send('New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi');
+      return msg.send('New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/2vvAAAB');
     } else {
-      return msg.send('@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://goo.gl/wDprGi');
+      return msg.send('@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/2vvAAAB');
     }
   });
   // ---
   robot.hear(/(kb public.?h?t?m?l?\b) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/174/Setting-up-a-Publichtml-Folder.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      msg.send('So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s');
+      msg.send('So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2Jb6E4y');
       return msg.send('More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts');
     } else {
-      msg.send('@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://goo.gl/WKwg9s');
+      msg.send('@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2Jb6E4y');
       return msg.send('More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts');
     }
   });
   // ---
   robot.hear(/(kb ftp) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/149/I-cant-connect-to-FTP-Help.html
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Click here for instructions on setting up FTP: https://goo.gl/5toACz');
+      return msg.send('Click here for instructions on setting up FTP: https://bit.ly/2DFbOm2');
     } else {
-      return msg.send('@' + user + ' Click here for instructions on setting up FTP: https://goo.gl/5toACz');
+      return msg.send('@' + user + ' Click here for instructions on setting up FTP: https://bit.ly/2DFbOm2');
     }
   });
   // ---
   robot.hear(/(kb (elec|electorrent|etm)) ?(?:@(\w*))?/i, function(msg) {
+    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/208/Electorrent-Desktop-Client.html
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -186,6 +178,7 @@ module.exports = function(robot) {
   // App Store Links
   // ---
   robot.hear(/(app plex) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -196,6 +189,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app wordpress) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -206,6 +200,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app ftp) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -216,6 +211,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app (lamp(.?stack))) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
@@ -226,6 +222,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app mattermost) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -236,6 +233,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app (rocket(.?chat))) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
@@ -246,6 +244,7 @@ module.exports = function(robot) {
   });
   // ---
   //robot.hear(/(app lets chat) ?(?:@(\w*))?/i, function(msg) {
+  //  //
   //  var user;
   //  user = escape(msg.match[2]);
   //  if (user === "undefined") {
@@ -256,6 +255,7 @@ module.exports = function(robot) {
   //});
   // ---
   robot.hear(/(app (ubuntu|vnc|ssh)) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -266,6 +266,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app rutorrent) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -276,6 +277,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app deluge) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -286,6 +288,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app transmission) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -296,6 +299,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app flood) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -306,6 +310,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app vpn) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -316,6 +321,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app nextcloud) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -326,6 +332,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app madsonic) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -336,6 +343,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app ((resil+io|bt.?sync))) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
@@ -346,6 +354,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app (mysql|mariadb)) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -356,6 +365,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app (nginx|php(7)?)) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -366,6 +376,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app znc) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -376,6 +387,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app rapidleech) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -386,6 +398,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app seat) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -396,6 +409,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app kodexplorer) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -406,6 +420,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app gogs) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -416,6 +431,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app serposcope) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -426,6 +442,7 @@ module.exports = function(robot) {
   });
   // ---
   //robot.hear(/(app fathom) ?(?:@(\w*))?/i, function(msg) {
+  //  //
   //  var user;
   //  user = escape(msg.match[2]);
   //  if (user === "undefined") {
@@ -436,6 +453,7 @@ module.exports = function(robot) {
   //});
   // ---
   robot.hear(/(app lemp) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -446,6 +464,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app teamspeak) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -456,6 +475,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app filerun) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -466,6 +486,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app (minecraft|mc)) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -476,6 +497,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(app gitlab) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -518,18 +540,21 @@ module.exports = function(robot) {
   // Chat Triggers
   // ---
   robot.hear(/(%PORTS|100EXTERNAL%)/i, function(msg) {
+    //
     var username;
     username = msg.message.user.name;
     return msg.send('@' + username + ' Please update the app and the relevant port will be shown. If no update is avaliable then please let us know in chat to make sure there is no other reason you are missing the port');
   });
   // ---
   robot.hear(/(https:\/\/<username>.appboxes.co,)/i, function(msg) {
+    //
     var username;
     username = msg.message.user.name;
     return msg.send('@' + username + ' Apologies you are having some issues with installing your app, If you have been seeing this error for longer than 45 Mins please let me know.');
   });
   // ---
   robot.hear(/(500 \[error,getplugins\])/i, function(msg) {
+    //
     var username;
     username = msg.message.user.name;
     msg.send('*STOP*, @' + username + ' Investigations are ongoing into the causes of this error, there is a Troubleshooting step you can take to try and resolve this, this has a varying level of success for different users');
@@ -538,6 +563,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(504 \[error,getplugins\])/i, function(msg) {
+    //
     var username;
     username = msg.message.user.name;
     msg.send('*STOP*, @' + username + ' do not restart your application or refresh the page. ruTorrent is single threaded on its XMLRPC interface, this means it can not manage an excessive amount of commands at once. Therefore, when doing any actions, do small chunks, wait for it to finish, then continue. If you still have this error after 30 mins please holla at an Admin or raise a ticket.');
@@ -545,6 +571,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(SSL_ERROR_BAD_CERT_DOMAIN)/i, function(msg) {
+    //
     var username;
     username = msg.message.user.name;
     msg.send('@' + username + ' If this error is seen while using Firefox, although it directly relates to the appboxes.co website it is not an error with you accessing the page. This error is only produced on Firefox and means the app you are trying to install/update has not finished yet. If the same page is opened in Chrome or IE you would get the "Please Wait" landing page advising the same. Please do not raise a ticket for this reason, if however, you have been getting the "Please Wait" page for more than 30 mins holla at an admin or raise a ticket.');
@@ -552,10 +579,12 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(who made you)/i, function(msg) {
+    //
     return msg.send('Zycore gave me life, Rid made me a real bot.');
   });
   // ---
   robot.hear(/((disk).*(quota|full))/i, function(msg) {
+    //
     var username;
     username = msg.message.user.name;
     msg.send('@' + username + ' If you have filled your Disk Quota, some applications will not work/load. In this case you will need to delete some data from your account to be able to continue to use your services. If the Disk Quota is full then the FTP App cant write to its logs/pid files and hence this is not an option to achive this.');
@@ -564,6 +593,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/((submit|raise) a?.*bug|issue tracker) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user, username;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -575,6 +605,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/((raise).*ticket) ?(?:@(\w*))?/i, function(msg) {
+    //
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -587,6 +618,7 @@ module.exports = function(robot) {
   // Simple Troubleshooting
   // ---
   robot.hear(/(ts ftp)/i, function(msg) {
+    //
     msg.send('Quick Troubleshooting Tips for FTP or SFTP');
     msg.send('1: Make sure the Port, Password, Username (For SFTP the username is: _root_) and Domain you are using is correct, Check here https://www.appboxes.co/appboxmanager/installedapps');
     msg.send('2: If the above does not work, and you are using FileZilla, remove the connection from connection manager and add it again.');
@@ -595,6 +627,7 @@ module.exports = function(robot) {
   });
   // ---
   return robot.hear(/(ts rutorrent)/i, function(msg) {
+    //
     msg.send('Quick Troubleshooting Tips for ruTorrent');
     msg.send('1: First thing, and most important, *DO NOT* uninsatll ruTorrent, ruTorrent is single threaded on its XMLRPC interface, this means it doesn\'t manage excessive commands simultaneously. Therefore, when doing any actions, do a small chunk, wait for them to finish, then continue.');
     msg.send('2: If after 15 mins (note large amounts of data/actions can take longer, be proportionate) restart your instance of ruTorrent here: https://www.appboxes.co/appboxmanager/installedapps.');
