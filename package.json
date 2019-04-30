@@ -1,6 +1,6 @@
 {
   "name": "responsebot",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Helpbot, an Automated and (not so) Intuitive response Bot for AppBoxCo",
   "main": "index.js",
   "scripts": {
