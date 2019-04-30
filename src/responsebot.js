@@ -173,7 +173,7 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(kb (elec|electorrent)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/(kb (etm|electorrent)) ?(?:@(\w*))?/i, function(msg) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
