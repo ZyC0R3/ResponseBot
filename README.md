@@ -65,4 +65,5 @@ V5.1.0 npm Update Patch and Minor Version.
 V6.0.0 Integrated  Reload script. (https://www.npmjs.com/package/hubot-reload)
 V6.0.1 Version control on updates for apps and chat triggers added for new apps.
 V6.0.2 Updated chat triggers
+V6.0.3 Updated chat triggers
 ```

@@ -173,6 +173,16 @@ module.exports = function(robot) {
     }
   });
   // ---
+  robot.hear(/(kb (elec|electorrent)) ?(?:@(\w*))?/i, function(msg) {
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus');
+    } else {
+      return msg.send('@' + user + ' Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus');
+    }
+  });
+  // ---
   // App Store Links
   // ---
   robot.hear(/(app plex) ?(?:@(\w*))?/i, function(msg) {
@@ -259,9 +269,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-18 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
+      return msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
     } else {
-      return msg.send('@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-18 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
+      return msg.send('@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
     }
   });
   // ---
