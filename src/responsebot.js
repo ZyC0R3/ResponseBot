@@ -173,9 +173,9 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(kb (etm|electorrent)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/(kb (elec|electorrent|etm)) ?(?:@(\w*))?/i, function(msg) {
     var user;
-    user = escape(msg.match[2]);
+    user = escape(msg.match[3]);
     if (user === "undefined") {
       return msg.send('Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus');
     } else {
