@@ -35,8 +35,9 @@ ZyC0R3
 Rid
 ```
 
-## Change Log
+# Change Log's
 
+## Responsebot.js
 ```
 V1.0.0 Internal test Version
 V2.0.0 Launch version - beta tests
@@ -67,4 +68,22 @@ V6.0.1 Version control on updates for apps and chat triggers added for new apps.
 V6.0.2 Updated chat triggers
 V6.0.3 Updated chat triggers
 V6.0.4 Code Fixes
+V6.0.5 Google Links has been depreciated so the links have been replaced with Bit.ly Links.
+```
+## TestScripts.js
+```
+V1.0.0 Initial Testing and Troubleshooting
+V1.0.4 Alpha Testing
+V1.0.5 Beta Testing
+```
+## Reload.js
+```
+This script is not owned or maintained by the creator of ResponseBot, For further information please see :https://www.npmjs.com/package/hubot-reload
+V1.0.0 Initial Testing and Troubleshooting
+V1.0.1 Public Release
+```
+## Responsebot.coffee.old
+```
+V5.0.4 Phased out CoffeeScript File and added a JS File.
+V6.0.5 Updated code to Match JS version, CoffeeScript Version is no longer used however this is maintained for reverse compatibility with older versions of HuBot (https://hubot.github.com/)
 ```
