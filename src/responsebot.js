@@ -46,7 +46,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V6.0.5');
+    return msg.send('The current version of ResponseBot that is loaded is JS V6.0.06');
   });
   // ---
   // KB Responses with user Triggers
@@ -504,6 +504,17 @@ module.exports = function(robot) {
       return msg.send('*GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
     } else {
       return msg.send('@' + user + ' *GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
+    }
+  });
+  // ---
+  robot.hear(/(app Tuleap) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120');
+    } else {
+      return msg.send('@' + user + ' *Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120');
     }
   });
   // ---
