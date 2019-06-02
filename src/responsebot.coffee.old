@@ -53,7 +53,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of ResponseBot that is loaded is CS V6.0.5'
+    msg.send 'The current version of ResponseBot that is loaded is CS V6.0.05'
   # ---
   # KB Responses with user Triggers
   # Google Links has been depreciated so the links have been replaced with Bit.ly Links.
