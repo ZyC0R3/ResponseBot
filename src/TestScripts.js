@@ -18,7 +18,9 @@
 module.exports = function(robot) {
   /// ---
 robot.hear(/(what vaur)/i, function(msg) {
-  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.5');
+  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.6.001');
+  // --- Use this as the Git Changelog Record
+  // --- 6.000 - Internal Code Testing (ICT)
 });
   // ---
   // --- Test Code for User VAR as it breaks every update
@@ -38,6 +40,17 @@ robot.hear(/(what vaur)/i, function(msg) {
       return msg.send(' null' + user);
     } else {
       return msg.send(' Non Valid @' + user);
+    }
+  });
+  robot.hear(/(app test) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Test:* Test');
+    } else {
+      msg.send('@' + user + ' *Test:* Test');
+      return msg.send('For Support and Instructions on how to Install this App, Check out the support pages, https://bit.ly/2KlnyhJ');
     }
   });
 };

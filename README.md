@@ -75,6 +75,7 @@ V6.0.5 Google Links has been depreciated so the links have been replaced with Bi
 V1.0.0 Initial Testing and Troubleshooting
 V1.0.4 Alpha Testing
 V1.0.5 Beta Testing
+V1.0.6.000+ These are Code Change Test, No Further Change Logs will be recorded for Internal Testing. Referred to as ICT in Future Records 
 ```
 ## Reload.js
 ```
