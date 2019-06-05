@@ -2,20 +2,19 @@
 //  Helpbot, an Automated and (not so) Intuitive response Bot.
 //  Hello and Good Morning Responses.
 //  Tagged Users in Responses
+//  Project Now under GPL-3.0 License
 //
 // Dependencies:
 //  None
 //
 // Configuration:
-//  Install via internal Hubot with CoffeeScript or via npm install responsebot --save
+//  Installed as part of ResponseBot via npm install responsebot --save
 //
 // Commands:
 //  KB = Knowledgebase Articles (Add users name to end of command to tag them in response)
 //  App or App User = app "appname" "Target User"
-//  APPCAT = appcat "category"
+//  APPCAT = appcat "category" (Currently Disabled)
 //  TS = Troubleshooting Basics
-//  CL = Change Log for Updated Apps
-//  [Botname] Reload = Reload script without having to restart Hubot
 //
 // Author:
 //  ZyC0R3
@@ -46,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V6.0.07');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.0');
   });
   // ---
   // KB Responses with user Triggers
