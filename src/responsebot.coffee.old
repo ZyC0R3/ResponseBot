@@ -2,20 +2,19 @@
 #  Helpbot, an Automated and (not so) Intuitive response Bot.
 #  Hello and Good Morning Responses.
 #  Tagged Users in Responses
+#  Project Now under GPL-3.0 License
 #
 # Dependencies:
 #  None
 #
 # Configuration:
-#  Install via internal Hubot with CoffeeScript or via npm install responsebot --save
+#  Installed as part of ResponseBot via npm install responsebot --save
 #
 # Commands:
 #  KB = Knowledgebase Articles (Add users name to end of command to tag them in response)
 #  App or App User = app "appname" "Target User"
-#  APPCAT = appcat "category"
+#  APPCAT = appcat "category" (Currently Disabled)
 #  TS = Troubleshooting Basics
-#  CL = Change Log for Updated Apps
-#  [Botname] Reload = Reload script without having to restart Hubot
 #
 # Author:
 #  ZyC0R3
@@ -53,7 +52,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of ResponseBot that is loaded is CS V6.0.05'
+    msg.send 'The current version of ResponseBot that is loaded is JS V7.0.0'
   # ---
   # KB Responses with user Triggers
   # Google Links has been depreciated so the links have been replaced with Bit.ly Links.
@@ -169,6 +168,7 @@ module.exports = (robot) ->
       msg.send '*Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
     else
       msg.send '@' + user + ' *Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KfGbnc'
   # ---
   robot.hear /(app wordpress) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -178,6 +178,7 @@ module.exports = (robot) ->
       msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
     else
       msg.send '@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WfpVoG'
   # ---
   robot.hear /(app ftp) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -187,6 +188,7 @@ module.exports = (robot) ->
       msg.send '*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
     else
       msg.send '@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WlR0eJ'
   # ---
   robot.hear /(app (lamp(.?stack))) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -196,6 +198,7 @@ module.exports = (robot) ->
       msg.send '*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
     else
       msg.send '@' + user + ' *Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/31ewD1Z'
   # ---
   robot.hear /(app mattermost) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -205,6 +208,7 @@ module.exports = (robot) ->
       msg.send '*Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
     else
       msg.send '@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JVY37n'
   # ---
   robot.hear /(app (rocket(.?chat))) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -214,17 +218,7 @@ module.exports = (robot) ->
       msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
     else
       msg.send '@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
-  # ---
-  #robot.hear(/(app lets chat) ?(?:@(\w*))?/i, function(msg) {
-  #  //
-  #  var user;
-  #  user = escape(msg.match[2]);
-  #  if (user === "undefined") {
-  #    return msg.send('*Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
-  #  } else {
-  #    return msg.send('@' + user + ' *Lets Chat:* A self-hosted chat app for small teams built by Security Compass. V0.4.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/88');
-  #  }
-  #});
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2IxXayL'
   # ---
   robot.hear /(app (ubuntu|vnc|ssh)) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -234,6 +228,7 @@ module.exports = (robot) ->
       msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
     else
       msg.send '@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/31csond'
   # ---
   robot.hear /(app rutorrent) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -243,6 +238,7 @@ module.exports = (robot) ->
       msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
     else
       msg.send '@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Muq7kk'
   # ---
   robot.hear /(app deluge) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -252,6 +248,7 @@ module.exports = (robot) ->
       msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
     else
       msg.send '@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2ETAmIy'
   # ---
   robot.hear /(app transmission) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -261,6 +258,7 @@ module.exports = (robot) ->
       msg.send '*Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
     else
       msg.send '@' + user + ' *Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QMj7xp'
   # ---
   robot.hear /(app flood) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -270,6 +268,7 @@ module.exports = (robot) ->
       msg.send '*Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
     else
       msg.send '@' + user + ' *Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QMW3Pb'
   # ---
   robot.hear /(app vpn) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -279,6 +278,7 @@ module.exports = (robot) ->
       msg.send '*VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
     else
       msg.send '@' + user + ' *VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2ImbfyX'
   # ---
   robot.hear /(app nextcloud) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -288,6 +288,7 @@ module.exports = (robot) ->
       msg.send '*Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
     else
       msg.send '@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Wqje7U'
   # ---
   robot.hear /(app madsonic) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -297,6 +298,7 @@ module.exports = (robot) ->
       msg.send '*Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
     else
       msg.send '@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2MuY5VB'
   # ---
   robot.hear /(app ((resil+io|bt.?sync))) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -306,6 +308,7 @@ module.exports = (robot) ->
       msg.send '*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
     else
       msg.send '@' + user + ' *Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Z7zvM4'
   # ---
   robot.hear /(app (mysql|mariadb)) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -315,6 +318,7 @@ module.exports = (robot) ->
       msg.send '*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
     else
       msg.send '@' + user + ' *MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JZurFT'
   # ---
   robot.hear /(app (nginx|php(7)?)) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -324,6 +328,7 @@ module.exports = (robot) ->
       msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
     else
       msg.send '@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/319xn8n'
   # ---
   robot.hear /(app znc) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -333,15 +338,7 @@ module.exports = (robot) ->
       msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
     else
       msg.send '@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
-  # ---
-  robot.hear /(app rapidleech) ?(?:@(\w*))?/i, (msg) ->
-    #
-    user = undefined
-    user = escape(msg.match[2])
-    if user == 'undefined'
-      msg.send '*Rapidleech:* Rapid Leech is a free server transfer script. V2.43 Requires 1 app slot: https://www.appboxes.co/appstore/app/78'
-    else
-      msg.send '@' + user + ' *Rapidleech:* Rapid Leech is a free server transfer script. V2.43 Requires 1 app slot: https://www.appboxes.co/appstore/app/78'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KuOZpk'
   # ---
   robot.hear /(app seat) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -351,6 +348,7 @@ module.exports = (robot) ->
       msg.send '*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
     else
       msg.send '@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WJeYjr'
   # ---
   robot.hear /(app kodexplorer) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -360,6 +358,7 @@ module.exports = (robot) ->
       msg.send '*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
     else
       msg.send '@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/317PYlc'
   # ---
   robot.hear /(app gogs) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -369,6 +368,7 @@ module.exports = (robot) ->
       msg.send '*Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
     else
       msg.send '@' + user + ' *Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2IkOcol'
   # ---
   robot.hear /(app serposcope) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -378,26 +378,7 @@ module.exports = (robot) ->
       msg.send '*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
     else
       msg.send '@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
-  # ---
-  #robot.hear(/(app fathom) ?(?:@(\w*))?/i, function(msg) {
-  #  //
-  #  var user;
-  #  user = escape(msg.match[2]);
-  #  if (user === "undefined") {
-  #    return msg.send('*Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113');
-  #  } else {
-  #    return msg.send('@' + user + ' *Fathom:* Fathom Analytics is a simpler and more privacy-focused alternative to Google Analytics. Requires 1 app slot: https://www.appboxes.co/appstore/app/113');
-  #  }
-  #});
-  # ---
-  robot.hear /(app lemp) ?(?:@(\w*))?/i, (msg) ->
-    #
-    user = undefined
-    user = escape(msg.match[2])
-    if user == 'undefined'
-      msg.send '*Lemp Stack:* LEMP is a group of open-source software which enable a server to host dynamic websites and web applications. V1.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/112'
-    else
-      msg.send '@' + user + ' *Lemp Stack:* LEMP is a group of open-source software which enable a server to host dynamic websites and web applications. V1.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/112'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KtHuz6'
   # ---
   robot.hear /(app teamspeak) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -407,6 +388,7 @@ module.exports = (robot) ->
       msg.send '*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118'
     else
       msg.send '@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Mrjgrz'
   # ---
   robot.hear /(app filerun) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -416,6 +398,7 @@ module.exports = (robot) ->
       msg.send '*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116'
     else
       msg.send '@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Wspzjt'
   # ---
   robot.hear /(app (minecraft|mc)) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -425,6 +408,7 @@ module.exports = (robot) ->
       msg.send '*Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117'
     else
       msg.send '@' + user + ' *Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2MsA95l'
   # ---
   robot.hear /(app gitlab) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -434,6 +418,17 @@ module.exports = (robot) ->
       msg.send '*GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119'
     else
       msg.send '@' + user + ' *GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2wJ4z8x'
+  # ---
+  robot.hear /(app Tuleap) ?(?:@(\w*))?/i, (msg) ->
+    #
+    user = undefined
+    user = escape(msg.match[2])
+    if user == 'undefined'
+      msg.send '*Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120'
+    else
+      msg.send '@' + user + ' *Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2XqPGDV'
   # ---
   # App Store Categories
   # Major Work Needed, Out of Date.
