@@ -70,6 +70,7 @@ V6.0.03 Updated chat triggers
 V6.0.04 Code Fixes
 V6.0.05 Google Links has been depreciated so the links have been replaced with Bit.ly Links.
 V6.0.06 New Chat triggers added
+V6.0.07 New Chat triggers added
 ```
 ## TestScripts.js
 ```
