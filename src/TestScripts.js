@@ -5,7 +5,7 @@
 //  None
 //
 // Configuration:
-//  Install via internal Hubot with CoffeeScript or via npm install responsebot --save
+//  Installed as part of ResponseBot via npm install responsebot --save
 //
 // Commands:
 //  App code "appname" "Target User"
@@ -18,7 +18,7 @@
 module.exports = function(robot) {
   /// ---
 robot.hear(/(what vaur)/i, function(msg) {
-  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.06.001');
+  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.6.001');
   // --- Use this as the Git Changelog Record
   // --- 6.000 - Internal Code Testing (ICT)
 });
