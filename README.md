@@ -75,6 +75,12 @@ V6.0.5 Google Links has been depreciated so the links have been replaced with Bi
 V6.0.6 New Chat triggers added
 V6.0.7 New Chat triggers added
 V7.0.0 Code Relicensing - Project is now under GPL-3.0
+V7.0.1 Converted index.coffee to index.js
+```
+
+## Coming Soon!
+```
+V7.1.0 - Major Command updates
 ```
 ## TestScripts.js
 ```
