@@ -101,4 +101,10 @@ V1.0.2 Patch Fix for NPM
 V5.0.4 Phased out CoffeeScript File and added a JS File
 V6.0.5 Updated code to Match JS version
 V7.0.0 Updated code to Match JS version, CoffeeScript Version is no longer used however this is maintained for reverse compatibility with older versions of HuBot (https://hubot.github.com/)
+V7.0.2 Updated code to Match JS version
+```
+
+## index.coffee.old
+```
+V7.0.1 Phased out CoffeeScript File and added a JS File
 ```
