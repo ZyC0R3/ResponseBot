@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.0');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.2 - Code42');
   });
   // ---
   // KB Responses with user Triggers
@@ -56,9 +56,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2IR1ADn');
+      return msg.send('Questions about DHT, Should you Disable it or not, Read this for more info: https://bit.ly/2JnT3Ww');
     } else {
-      return msg.send('@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2IR1ADn');
+      return msg.send('@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2JnT3Ww');
     }
   });
   // ---
@@ -67,9 +67,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/2PEY53c');
+      return msg.send('Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/3bvusv4');
     } else {
-      return msg.send('@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/2PEY53c');
+      return msg.send('@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/3bvusv4');
     }
   });
   // ---
@@ -78,9 +78,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2GYwkPx');
+      return msg.send('Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2R7Yu0n');
     } else {
-      return msg.send('@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2GYwkPx');
+      return msg.send('@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2R7Yu0n');
     }
   });
   // ---
@@ -89,9 +89,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/2PCA4d5');
+      return msg.send('Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/3dzanpv');
     } else {
-      return msg.send('@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/2PCA4d5');
+      return msg.send('@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/3dzanpv');
     }
   });
   // ---
@@ -100,9 +100,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Before you open a ticket or complain something is broken read this: https://bit.ly/2UTkRFv');
+      return msg.send('Before you open a ticket or complain something is broken read this: https://bit.ly/39mjPJH');
     } else {
-      return msg.send('@' + user + ' Before you open a ticket or complain something is broken read this: https://bit.ly/2UTkRFv');
+      return msg.send('@' + user + ' Before you open a ticket or complain something is broken read this: https://bit.ly/39mjPJH');
     }
   });
   // ---
@@ -111,9 +111,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Check out this page on known and common ruTorrent issues and errors: https://bit.ly/2Whgdmn');
+      return msg.send('Check out this page on known and common ruTorrent issues and errors: https://bit.ly/3ardMVu');
     } else {
-      return msg.send('@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://bit.ly/2Whgdmn');
+      return msg.send('@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://bit.ly/3ardMVu');
     }
   });
   // ---
@@ -122,9 +122,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Stuck on the installing page, have a quick read: https://bit.ly/2V2xP97');
+      return msg.send('Stuck on the installing page, have a quick read: https://bit.ly/2xs5ZrY');
     } else {
-      return msg.send('@' + user + ' Stuck on the installing page, have a quick read: https://bit.ly/2V2xP97');
+      return msg.send('@' + user + ' Stuck on the installing page, have a quick read: https://bit.ly/2xs5ZrY');
     }
   });
   // ---
@@ -133,9 +133,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
-      return msg.send('New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/2vvAAAB');
+      return msg.send('New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/3byKfJK');
     } else {
-      return msg.send('@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/2vvAAAB');
+      return msg.send('@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/3byKfJK');
     }
   });
   // ---
@@ -144,10 +144,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      msg.send('So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2Jb6E4y');
+      msg.send('So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2X1cGvV');
       return msg.send('More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts');
     } else {
-      msg.send('@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2Jb6E4y');
+      msg.send('@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2X1cGvV');
       return msg.send('More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts');
     }
   });
@@ -157,9 +157,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('Click here for instructions on setting up FTP: https://bit.ly/2DFbOm2');
+      return msg.send('Click here for instructions on setting up FTP: https://bit.ly/2ydEOkR');
     } else {
-      return msg.send('@' + user + ' Click here for instructions on setting up FTP: https://bit.ly/2DFbOm2');
+      return msg.send('@' + user + ' Click here for instructions on setting up FTP: https://bit.ly/2ydEOkR');
     }
   });
   // ---
@@ -168,9 +168,9 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
-      return msg.send('Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus');
+      return msg.send('Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2UFQF2I');
     } else {
-      return msg.send('@' + user + ' Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus');
+      return msg.send('@' + user + ' Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2UFQF2I');
     }
   });
   // ---
@@ -184,7 +184,7 @@ module.exports = function(robot) {
       return msg.send('*Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37');
     } else {
       msg.send('@' + user + ' *Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KfGbnc');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -193,10 +193,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87');
+      return msg.send('*Wordpress:* WordPress is a free and open-source content management system. V4.9.8-L2 Requires 1 app slot: https://www.appboxes.co/appstore/app/87');
     } else {
-      msg.send('@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WfpVoG');
+      msg.send('@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8-L2 Requires 1 app slot: https://www.appboxes.co/appstore/app/87');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -208,7 +208,7 @@ module.exports = function(robot) {
       return msg.send('*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
     } else {
       msg.send('@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WlR0eJ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -220,7 +220,7 @@ module.exports = function(robot) {
       return msg.send('*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96');
     } else {
       msg.send('@' + user + ' *Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/31ewD1Z');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -229,10 +229,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
+      return msg.send('*Mattermost:* Workplace messaging for web, PCs and phones. V5.21.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
     } else {
-      msg.send('@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JVY37n');
+      msg.send('@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V5.21.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -241,10 +241,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
-      return msg.send('*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
+      return msg.send('*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V3.0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
     } else {
-      msg.send('@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2IxXayL');
+      msg.send('@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V3.0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -253,10 +253,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
-      return msg.send('*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
+      return msg.send('*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-4 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
     } else {
-      msg.send('@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/31csond');
+      msg.send('@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-4 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -265,10 +265,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
+      return msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.9.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
     } else {
-      msg.send('@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Muq7kk');
+      msg.send('@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.9.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -277,10 +277,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
+      return msg.send('*Deluge:* Deluge is a lightweight BitTorrent client. V2.0.3-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
     } else {
-      msg.send('@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2ETAmIy');
+      msg.send('@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V2.0.3-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -292,7 +292,7 @@ module.exports = function(robot) {
       return msg.send('*Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77');
     } else {
       msg.send('@' + user + ' *Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QMj7xp');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -304,7 +304,7 @@ module.exports = function(robot) {
       return msg.send('*Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82');
     } else {
       msg.send('@' + user + ' *Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QMW3Pb');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -313,10 +313,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
+      return msg.send('*VPN:* The Open Source VPN. V2.4.8-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
     } else {
-      msg.send('@' + user + ' *VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2ImbfyX');
+      msg.send('@' + user + ' *VPN:* The Open Source VPN. V2.4.8-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -325,10 +325,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
+      return msg.send('*Nextcloud:* Nextcloud - Protecting your data. V18-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
     } else {
-      msg.send('@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Wqje7U');
+      msg.send('@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V18-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -340,7 +340,7 @@ module.exports = function(robot) {
       return msg.send('*Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
     } else {
       msg.send('@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2MuY5VB');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -352,7 +352,7 @@ module.exports = function(robot) {
       return msg.send('*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73');
     } else {
       msg.send('@' + user + ' *Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Z7zvM4');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -364,7 +364,7 @@ module.exports = function(robot) {
       return msg.send('*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74');
     } else {
       msg.send('@' + user + ' *MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JZurFT');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -373,10 +373,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
+      return msg.send('*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
     } else {
-      msg.send('@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/319xn8n');
+      msg.send('@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -385,10 +385,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
+      return msg.send('*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
     } else {
-      msg.send('@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KuOZpk');
+      msg.send('@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -397,10 +397,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
+      return msg.send('*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.21 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
     } else {
-      msg.send('@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WJeYjr');
+      msg.send('@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.21 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -409,10 +409,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
+      return msg.send('*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
     } else {
-      msg.send('@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/317PYlc');
+      msg.send('@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -424,7 +424,7 @@ module.exports = function(robot) {
       return msg.send('*Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111');
     } else {
       msg.send('@' + user + ' *Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2IkOcol');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -433,10 +433,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114');
+      return msg.send('*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114');
     } else {
-      msg.send('@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KtHuz6');
+      msg.send('@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -445,10 +445,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
+      return msg.send('*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.11.0-2 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
     } else {
-      msg.send('@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Mrjgrz');
+      msg.send('@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.11.0-2 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -457,10 +457,10 @@ module.exports = function(robot) {
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
-      return msg.send('*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
+      return msg.send('*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V 2019.12.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
     } else {
-      msg.send('@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Wspzjt');
+      msg.send('@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V 2019.12.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -472,7 +472,7 @@ module.exports = function(robot) {
       return msg.send('*Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117');
     } else {
       msg.send('@' + user + ' *Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2MsA95l');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -484,7 +484,7 @@ module.exports = function(robot) {
       return msg.send('*GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
     } else {
       msg.send('@' + user + ' *GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2wJ4z8x');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
   // ---
@@ -496,9 +496,22 @@ module.exports = function(robot) {
       return msg.send('*Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120');
     } else {
       msg.send('@' + user + ' *Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2XqPGDV');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
     }
   });
+  // ---
+  robot.hear(/(app rclone) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
+    } else {
+      msg.send('@' + user + ' *Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2y7JOHF');
+    }
+  });
+  // ---
   // ---
   // App Store Categories
   // Major Work Needed, Out of Date.
@@ -630,6 +643,6 @@ module.exports = function(robot) {
 };
 
 // ---
-// Script for AppBoxesCo use only JS V6.0.1
+// Script for AppBoxesCo use only JS V7.0.2
 // ZyC0R3 - Rid
 // ---

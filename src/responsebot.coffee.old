@@ -52,7 +52,7 @@ module.exports = (robot) ->
   # KB Version Info
   # ---
   robot.hear /(what vaur)/i, (msg) ->
-    msg.send 'The current version of ResponseBot that is loaded is JS V7.0.0'
+    msg.send 'The current version of ResponseBot that is loaded is JS V7.0.2 - Code42'
   # ---
   # KB Responses with user Triggers
   # Google Links has been depreciated so the links have been replaced with Bit.ly Links.
@@ -62,82 +62,82 @@ module.exports = (robot) ->
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2IR1ADn'
+      msg.send 'Questions about DHT, Should you Disable it or not, Read this for more info: https://bit.ly/2JnT3Ww'
     else
-      msg.send '@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2IR1ADn'
+      msg.send '@' + user + ' Questions about DHT, Should you Disable it or not, Read this for more info:  https://bit.ly/2JnT3Ww'
   # ---
   robot.hear /(kb transdroid ru) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/166/ruTorrent-and-Transdroid.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/2PEY53c'
+      msg.send 'Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/3bvusv4'
     else
-      msg.send '@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/2PEY53c'
+      msg.send '@' + user + ' Look no further for the settings for Transdroid (ruTorrent Set-Up Guide):  https://bit.ly/3bvusv4'
   # ---
   robot.hear /(kb transdroid deluge) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.appboxes.co/index.php?rp=/knowledgebase/207/Deluge-and-Transdroid.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2GYwkPx'
+      msg.send 'Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2R7Yu0n'
     else
-      msg.send '@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2GYwkPx'
+      msg.send '@' + user + ' Look no further for the settings for Transdroid (Deluge Set-Up Guide):  https://bit.ly/2R7Yu0n'
   # ---
   robot.hear /(kb autodl) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/171/Autodl-irssi-An-Introduction.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/2PCA4d5'
+      msg.send 'Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/3dzanpv'
     else
-      msg.send '@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/2PCA4d5'
+      msg.send '@' + user + ' Need some help with Autodl-irssi, Take a look at this basic guide: https://bit.ly/3dzanpv'
   # ---
   robot.hear /(kb slow speeds) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/177/Slow-Speeds.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Before you open a ticket or complain something is broken read this: https://bit.ly/2UTkRFv'
+      msg.send 'Before you open a ticket or complain something is broken read this: https://bit.ly/39mjPJH'
     else
-      msg.send '@' + user + ' Before you open a ticket or complain something is broken read this: https://bit.ly/2UTkRFv'
+      msg.send '@' + user + ' Before you open a ticket or complain something is broken read this: https://bit.ly/39mjPJH'
   # ---
   robot.hear /(kb rutorrent errors) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/176/ruTorrent-Errors-and-Issues.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Check out this page on known and common ruTorrent issues and errors: https://bit.ly/2Whgdmn'
+      msg.send 'Check out this page on known and common ruTorrent issues and errors: https://bit.ly/3ardMVu'
     else
-      msg.send '@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://bit.ly/2Whgdmn'
+      msg.send '@' + user + ' Check out this page on known and common ruTorrent issues and errors: https://bit.ly/3ardMVu'
   # ---
   robot.hear /(kb installing page) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/154/My-app-wont-install-I-am-stuck-on-the-installing-page.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Stuck on the installing page, have a quick read: https://bit.ly/2V2xP97'
+      msg.send 'Stuck on the installing page, have a quick read: https://bit.ly/2xs5ZrY'
     else
-      msg.send '@' + user + ' Stuck on the installing page, have a quick read: https://bit.ly/2V2xP97'
+      msg.send '@' + user + ' Stuck on the installing page, have a quick read: https://bit.ly/2xs5ZrY'
   # ---
   robot.hear /(kb (gs|getting started)) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/31/Getting-Started
     user = undefined
     user = escape(msg.match[3])
     if user == 'undefined'
-      msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/2vvAAAB'
+      msg.send 'New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/3byKfJK'
     else
-      msg.send '@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/2vvAAAB'
+      msg.send '@' + user + ' New to AppBoxes, have a quick read of our getting started pages: https://bit.ly/3byKfJK'
   # ---
   robot.hear /(kb public.?h?t?m?l?\b) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/174/Setting-up-a-Publichtml-Folder.html
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2Jb6E4y'
+      msg.send 'So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2X1cGvV'
       msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
     else
-      msg.send '@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2Jb6E4y'
+      msg.send '@' + user + ' So you\'re looking at setting up a public_html Folder, look no further: https://bit.ly/2X1cGvV'
       msg.send 'More Knowledgebase Articles to follow with further support with things like .htaccess and PHP directory scripts'
   # ---
   robot.hear /(kb ftp) ?(?:@(\w*))?/i, (msg) ->
@@ -145,18 +145,18 @@ module.exports = (robot) ->
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send 'Click here for instructions on setting up FTP: https://bit.ly/2DFbOm2'
+      msg.send 'Click here for instructions on setting up FTP: https://bit.ly/2ydEOkR'
     else
-      msg.send '@' + user + ' Click here for instructions on setting up FTP: https://bit.ly/2DFbOm2'
+      msg.send '@' + user + ' Click here for instructions on setting up FTP: https://bit.ly/2ydEOkR'
   # ---
   robot.hear /(kb (elec|electorrent|etm)) ?(?:@(\w*))?/i, (msg) ->
     # https://billing.seedboxco.net/index.php?rp=/knowledgebase/208/Electorrent-Desktop-Client.html
     user = undefined
     user = escape(msg.match[3])
     if user == 'undefined'
-      msg.send 'Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus'
+      msg.send 'Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2UFQF2I'
     else
-      msg.send '@' + user + ' Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2DCYtus'
+      msg.send '@' + user + ' Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2UFQF2I'
   # ---
   # App Store Links
   # ---
@@ -168,17 +168,17 @@ module.exports = (robot) ->
       msg.send '*Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
     else
       msg.send '@' + user + ' *Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KfGbnc'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app wordpress) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
+      msg.send '*Wordpress:* WordPress is a free and open-source content management system. V4.9.8-L2 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
     else
-      msg.send '@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WfpVoG'
+      msg.send '@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8-L2 Requires 1 app slot: https://www.appboxes.co/appstore/app/87'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app ftp) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -188,7 +188,7 @@ module.exports = (robot) ->
       msg.send '*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
     else
       msg.send '@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WlR0eJ'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app (lamp(.?stack))) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -198,57 +198,57 @@ module.exports = (robot) ->
       msg.send '*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
     else
       msg.send '@' + user + ' *Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/31ewD1Z'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app mattermost) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
+      msg.send '*Mattermost:* Workplace messaging for web, PCs and phones. V5.21.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
     else
-      msg.send '@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V4.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JVY37n'
+      msg.send '@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V5.21.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app (rocket(.?chat))) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[4])
     if user == 'undefined'
-      msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
+      msg.send '*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V3.0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
     else
-      msg.send '@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V0.62.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2IxXayL'
+      msg.send '@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V3.0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/89'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app (ubuntu|vnc|ssh)) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[3])
     if user == 'undefined'
-      msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+      msg.send '*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-4 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
     else
-      msg.send '@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-3 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/31csond'
+      msg.send '@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-4 Requires 5 app slot: https://www.appboxes.co/appstore/app/97'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app rutorrent) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+      msg.send '*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.9.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
     else
-      msg.send '@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.8-20 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Muq7kk'
+      msg.send '@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.9.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/66'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app deluge) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
+      msg.send '*Deluge:* Deluge is a lightweight BitTorrent client. V2.0.3-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
     else
-      msg.send '@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V1.3.15-4 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2ETAmIy'
+      msg.send '@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V2.0.3-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/68'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app transmission) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -258,7 +258,7 @@ module.exports = (robot) ->
       msg.send '*Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
     else
       msg.send '@' + user + ' *Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QMj7xp'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app flood) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -268,27 +268,27 @@ module.exports = (robot) ->
       msg.send '*Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
     else
       msg.send '@' + user + ' *Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QMW3Pb'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app vpn) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
+      msg.send '*VPN:* The Open Source VPN. V2.4.8-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
     else
-      msg.send '@' + user + ' *VPN:* The Open Source VPN. V2.4.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2ImbfyX'
+      msg.send '@' + user + ' *VPN:* The Open Source VPN. V2.4.8-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/69'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app nextcloud) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
+      msg.send '*Nextcloud:* Nextcloud - Protecting your data. V18-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
     else
-      msg.send '@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V13.0.4 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Wqje7U'
+      msg.send '@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V18-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app madsonic) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -298,7 +298,7 @@ module.exports = (robot) ->
       msg.send '*Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
     else
       msg.send '@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2MuY5VB'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app ((resil+io|bt.?sync))) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -308,7 +308,7 @@ module.exports = (robot) ->
       msg.send '*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
     else
       msg.send '@' + user + ' *Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Z7zvM4'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app (mysql|mariadb)) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -318,47 +318,47 @@ module.exports = (robot) ->
       msg.send '*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
     else
       msg.send '@' + user + ' *MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JZurFT'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app (nginx|php(7)?)) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
+      msg.send '*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
     else
-      msg.send '@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/319xn8n'
+      msg.send '@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app znc) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
+      msg.send '*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
     else
-      msg.send '@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KuOZpk'
+      msg.send '@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/81'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app seat) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
+      msg.send '*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.21 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
     else
-      msg.send '@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.6 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WJeYjr'
+      msg.send '@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.21 Requires 1 app slot: https://www.appboxes.co/appstore/app/102'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app kodexplorer) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+      msg.send '*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
     else
-      msg.send '@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/317PYlc'
+      msg.send '@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/103'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app gogs) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -368,37 +368,37 @@ module.exports = (robot) ->
       msg.send '*Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
     else
       msg.send '@' + user + ' *Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2IkOcol'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app serposcope) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
+      msg.send '*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
     else
-      msg.send '@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.9.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2KtHuz6'
+      msg.send '@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app teamspeak) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118'
+      msg.send '*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.11.0-2 Requires 3 app slot: https://www.appboxes.co/appstore/app/118'
     else
-      msg.send '@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.5.4 Requires 3 app slot: https://www.appboxes.co/appstore/app/118'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Mrjgrz'
+      msg.send '@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.11.0-2 Requires 3 app slot: https://www.appboxes.co/appstore/app/118'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app filerun) ?(?:@(\w*))?/i, (msg) ->
     #
     user = undefined
     user = escape(msg.match[2])
     if user == 'undefined'
-      msg.send '*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116'
+      msg.send '*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V 2019.12.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/116'
     else
-      msg.send '@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/116'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2Wspzjt'
+      msg.send '@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V 2019.12.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/116'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app (minecraft|mc)) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -408,7 +408,7 @@ module.exports = (robot) ->
       msg.send '*Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117'
     else
       msg.send '@' + user + ' *Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2MsA95l'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app gitlab) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -418,7 +418,7 @@ module.exports = (robot) ->
       msg.send '*GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119'
     else
       msg.send '@' + user + ' *GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2wJ4z8x'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
   # ---
   robot.hear /(app Tuleap) ?(?:@(\w*))?/i, (msg) ->
     #
@@ -428,7 +428,18 @@ module.exports = (robot) ->
       msg.send '*Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120'
     else
       msg.send '@' + user + ' *Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120'
-      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2XqPGDV'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: '
+  # ---
+  robot.hear /(app rclone) ?(?:@(\w*))?/i, (msg) ->
+    #
+    user = undefined
+    user = escape(msg.match[2])
+    if user == 'undefined'
+      msg.send '*Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123'
+    else
+      msg.send '@' + user + ' *Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123'
+      msg.send 'Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2y7JOHF'
+  # ---
   # ---
   # App Store Categories
   # Major Work Needed, Out of Date.
@@ -547,6 +558,5 @@ module.exports = (robot) ->
     msg.send '4: If the first 3 dont help then please holla at an admin or raise a ticket. _(Type `Raise a Ticket` for more info)_'
 
 # ---
-# Script for AppBoxesCo use only JS V6.0.1
+# Script for AppBoxesCo use only JS V7.0.2
 # ZyC0R3 - Rid
-# ---
