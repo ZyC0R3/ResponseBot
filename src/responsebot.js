@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.2');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.4');
   });
   // ---
   // KB Responses with user Triggers
@@ -586,7 +586,7 @@ module.exports = function(robot) {
   // ---
   robot.hear(/(who made you)/i, function(msg) {
     //
-    return msg.send('Zycore gave me life, Rid made me a real bot.');
+    return msg.send('Zycore gave me life, Rid made me a real Bot. I can be found at https://www.npmjs.com/package/responsebot');
   });
   // ---
   robot.hear(/((disk).*(quota|full))/i, function(msg) {

@@ -76,7 +76,9 @@ V6.0.6 New Chat triggers added
 V6.0.7 New Chat triggers added
 V7.0.0 Code Relicensing - Project is now under GPL-3.0
 V7.0.1 Converted index.coffee to index.js
-V7.0.2 Updated all App Command Links 
+V7.0.2 Updated all App Command Links
+V7.0.3 Updated Reload Script
+V7.0.4 Test Patch
 ```
 
 ## Coming Soon!
@@ -96,6 +98,7 @@ This script is not owned or maintained by the creator of ResponseBot, For furthe
 V1.0.0 Initial Testing and Troubleshooting
 V1.0.1 Public Release
 V1.0.2 Patch Fix for NPM
+V1.0.3 New NPM Update Patch
 ```
 ## Responsebot.coffee.old
 ```
