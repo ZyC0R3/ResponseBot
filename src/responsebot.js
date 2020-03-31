@@ -45,14 +45,14 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.2 - Code42');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.0.2');
   });
   // ---
   // KB Responses with user Triggers
   // Google Links has been depreciated so the links have been replaced with Bit.ly Links.
   // ---
   robot.hear(/(kb dht) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/180/DHT-Enable-or-Disable-.html
+    // https://www.seedboxco.net/viewarticle/?article=dht-enable-or-disable
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -63,7 +63,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb transdroid ru) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/166/ruTorrent-and-Transdroid.html
+    // https://www.seedboxco.net/viewarticle/?article=deluge-transdroid
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -74,7 +74,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb transdroid deluge) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.appboxes.co/index.php?rp=/knowledgebase/207/Deluge-and-Transdroid.html
+    // https://www.seedboxco.net/viewarticle/?article=deluge-transdroid
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -85,7 +85,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb autodl) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/171/Autodl-irssi-An-Introduction.html
+    // https://www.seedboxco.net/viewarticle/?article=autodl-irssi-an-introduction
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -96,7 +96,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb slow speeds) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/177/Slow-Speeds.html
+    // https://www.seedboxco.net/viewarticle/?article=slow-speeds
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -107,7 +107,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb rutorrent errors) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/176/ruTorrent-Errors-and-Issues.html
+    // https://www.seedboxco.net/viewarticle/?article=rutorrent-errors-and-issues
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -118,7 +118,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb installing page) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/154/My-app-wont-install-I-am-stuck-on-the-installing-page.html
+    // https://www.seedboxco.net/viewarticle/?article=my-app-won-t-install-i-am-stuck-on-the-installing-page
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -129,7 +129,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb (gs|getting started)) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/31/Getting-Started
+    // https://www.seedboxco.net/knowledgebasehome/
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -140,7 +140,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb public.?h?t?m?l?\b) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/174/Setting-up-a-Publichtml-Folder.html
+    // https://www.seedboxco.net/viewarticle/?article=setting-up-a-public_html-folder
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -153,7 +153,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb ftp) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/149/I-cant-connect-to-FTP-Help.html
+    // https://www.seedboxco.net/viewarticle/?article=i-can-t-connect-to-ftp-help
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
@@ -164,7 +164,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb (elec|electorrent|etm)) ?(?:@(\w*))?/i, function(msg) {
-    // https://billing.seedboxco.net/index.php?rp=/knowledgebase/208/Electorrent-Desktop-Client.html
+    // https://www.seedboxco.net/viewarticle/?article=electorrent-desktop-client
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
@@ -177,338 +177,338 @@ module.exports = function(robot) {
   // App Store Links
   // ---
   robot.hear(/(app plex) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-plex-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37');
     } else {
       msg.send('@' + user + ' *Plex:* Organize your videos, music, and photos. (Plex Version is controlled in App) Requires 1 app slot: https://www.appboxes.co/appstore/app/37');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3bFBIVf');
     }
   });
   // ---
   robot.hear(/(app wordpress) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-wordpress-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Wordpress:* WordPress is a free and open-source content management system. V4.9.8-L2 Requires 1 app slot: https://www.appboxes.co/appstore/app/87');
     } else {
       msg.send('@' + user + ' *Wordpress:* WordPress is a free and open-source content management system. V4.9.8-L2 Requires 1 app slot: https://www.appboxes.co/appstore/app/87');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WT1IZf');
     }
   });
   // ---
   robot.hear(/(app ftp) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-pure-ftpd-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
     } else {
       msg.send('@' + user + ' *Pure-FTPd:* Pure-FTPd is an FTP server. V1.0.43-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/67');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3ayMnRl');
     }
   });
   // ---
   robot.hear(/(app (lamp(.?stack))) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-lamp-stack-on-your-seedbox
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
       return msg.send('*Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96');
     } else {
       msg.send('@' + user + ' *Lamp Stack:* LAMP is a prebuild webserver. V3.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/96');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2QWamSH');
     }
   });
   // ---
   robot.hear(/(app mattermost) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-mattermost-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Mattermost:* Workplace messaging for web, PCs and phones. V5.21.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
     } else {
       msg.send('@' + user + ' *Mattermost:* Workplace messaging for web, PCs and phones. V5.21.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/95');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/39w99YX');
     }
   });
   // ---
   robot.hear(/(app (rocket(.?chat))) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-rocket-chat-on-your-seedbox
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
       return msg.send('*Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V3.0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
     } else {
       msg.send('@' + user + ' *Rocket Chat:* Rocket.Chat is the leading open source team chat software solution. V3.0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/89');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3dSoMNQ');
     }
   });
   // ---
   robot.hear(/(app (ubuntu|vnc|ssh)) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-ubuntu-18.04-vnc-on-your-seedbox
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
       return msg.send('*Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-4 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
     } else {
       msg.send('@' + user + ' *Ubuntu Desktop (VNC):* This install includes VNC, SSH & Various Apps. V18.04-4 Requires 5 app slot: https://www.appboxes.co/appstore/app/97');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2w29lS5');
     }
   });
   // ---
   robot.hear(/(app rutorrent) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-rutorrent-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.9.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
     } else {
       msg.send('@' + user + ' *ruTorrent:* ruTorrent is a web front-end for rtorrent. V3.9.7 Requires 1 app slot: https://www.appboxes.co/appstore/app/66');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3dIwOIT');
     }
   });
   // ---
   robot.hear(/(app deluge) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-deluge-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Deluge:* Deluge is a lightweight BitTorrent client. V2.0.3-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
     } else {
       msg.send('@' + user + ' *Deluge:* Deluge is a lightweight BitTorrent client. V2.0.3-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/68');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2UvaH0S');
     }
   });
   // ---
   robot.hear(/(app transmission) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-transmission-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77');
     } else {
       msg.send('@' + user + ' *Transmission:* Transmission is a BitTorrent client. V2.94 Requires 1 app slot: https://www.appboxes.co/appstore/app/77');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3aD9hY8');
     }
   });
   // ---
   robot.hear(/(app flood) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-flood-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82');
     } else {
       msg.send('@' + user + ' *Flood:* A modern web UI for rTorrent. V1.0.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/82');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3bx2f7c');
     }
   });
   // ---
   robot.hear(/(app vpn) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-vpn-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*VPN:* The Open Source VPN. V2.4.8-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
     } else {
       msg.send('@' + user + ' *VPN:* The Open Source VPN. V2.4.8-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/69');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2UxE16U');
     }
   });
   // ---
   robot.hear(/(app nextcloud) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-nextcloud-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Nextcloud:* Nextcloud - Protecting your data. V18-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
     } else {
       msg.send('@' + user + ' *Nextcloud:* Nextcloud - Protecting your data. V18-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/71');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/342VyHA');
     }
   });
   // ---
   robot.hear(/(app madsonic) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-madsonic-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
     } else {
       msg.send('@' + user + ' *Madsonic:* Madsonic is a web-based media library. V6.3.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/72');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/33WWw7Y');
     }
   });
   // ---
   robot.hear(/(app ((resil+io|bt.?sync))) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-resilio-sync-on-your-seedbox
     var user;
     user = escape(msg.match[4]);
     if (user === "undefined") {
       return msg.send('*Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73');
     } else {
       msg.send('@' + user + ' *Resilio Sync:* Have Your Files Anywhere, Sync to all your devices. V2.5-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/73');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2yibKZr');
     }
   });
   // ---
   robot.hear(/(app (mysql|mariadb)) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-my-sql-mariadb-on-your-seedbox
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
       return msg.send('*MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74');
     } else {
       msg.send('@' + user + ' *MySQL (MariaDB):* A popular database server. Made by the original MySQL devs. V10.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/74');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3dEOnd3');
     }
   });
   // ---
   robot.hear(/(app (nginx|php(7)?)) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-nginx-php7-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
     } else {
       msg.send('@' + user + ' *Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WWUzH7');
     }
   });
   // ---
   robot.hear(/(app znc) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-znc-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
     } else {
       msg.send('@' + user + ' *ZNC:* ZNC is an IRC network bouncer or BNC. V1.7.5 Requires 1 app slot: https://www.appboxes.co/appstore/app/81');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2UuzuCg');
     }
   });
   // ---
   robot.hear(/(app seat) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-seat-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.21 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
     } else {
       msg.send('@' + user + ' *SeAT:* A Simple, EVE Online API Tool and Corporation Manager. V3.0.21 Requires 1 app slot: https://www.appboxes.co/appstore/app/102');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WXrgEk');
     }
   });
   // ---
   robot.hear(/(app kodexplorer) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-kodexplorer-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
     } else {
       msg.send('@' + user + ' *kODExplorer:* A web based file manager, web IDE / browser based code editor. V4.35-3 Requires 1 app slot: https://www.appboxes.co/appstore/app/103');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WWftpX');
     }
   });
   // ---
   robot.hear(/(app gogs) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-gogs-on-your-seedboxcc
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111');
     } else {
       msg.send('@' + user + ' *Gogs:* A painless self-hosted Git service. V0.11.53 Requires 1 app slot: https://www.appboxes.co/appstore/app/111');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2wGY4ag');
     }
   });
   // ---
   robot.hear(/(app serposcope) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-serposcope-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Serposcope:* Rank tracker to monitor websites ranking in Google. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114');
     } else {
       msg.send('@' + user + ' *Serposcope:* Rank tracker to monitor websites ranking in Google. V2.10.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/114');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WWgnml');
     }
   });
   // ---
   robot.hear(/(app teamspeak) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-teamspeak-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.11.0-2 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
     } else {
       msg.send('@' + user + ' *Teamspeak 3 Server:* Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime. V3.11.0-2 Requires 3 app slot: https://www.appboxes.co/appstore/app/118');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2WWgnml');
     }
   });
   // ---
   robot.hear(/(app filerun) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-filerun-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V 2019.12.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
     } else {
       msg.send('@' + user + ' *FileRun File Manager:* Access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more. V 2019.12.25 Requires 1 app slot: https://www.appboxes.co/appstore/app/116');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2yopi5V');
     }
   });
   // ---
   robot.hear(/(app (minecraft|mc)) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-minecraft-server-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117');
     } else {
       msg.send('@' + user + ' *Minecraft Server:* McMyAdmin is the leading web control panel and administration console for Minecraft servers. V2.7.1.0-1 Requires 5 app slot: https://www.appboxes.co/appstore/app/117');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2xz4NTA');
     }
   });
   // ---
   robot.hear(/(app gitlab) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-gitlab-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
     } else {
       msg.send('@' + user + ' *GitLab:* GitLab is a web-based Git-repository manager. V11.7.0-ce.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/119');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/3dMr7Ke');
     }
   });
   // ---
   robot.hear(/(app Tuleap) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=installing-tuleap-on-your-seedbox
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120');
     } else {
       msg.send('@' + user + ' *Tuleap:* Software development & agile management. V11.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/120');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: ');
+      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2JoZ05M');
     }
   });
   // ---
   robot.hear(/(app rclone) ?(?:@(\w*))?/i, function(msg) {
-    //
+    // https://www.seedboxco.net/viewarticle/?article=setup-rclone-with-google-drive-and-plex
     var user;
     user = escape(msg.match[2]);
     if (user === "undefined") {
       return msg.send('*Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
     } else {
       msg.send('@' + user + ' *Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
-      return msg.send('Check out the Installation Guide for support and instructions on how to install this App: https://bit.ly/2y7JOHF');
+      return msg.send('Check out the Installation Guide for support and instructions on how to setup rclone with Google Drive and Plex: https://bit.ly/2y7JOHF');
     }
   });
   // ---
