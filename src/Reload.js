@@ -36,12 +36,26 @@ module.exports = function(robot) {
     id: 'reload-scripts.reload'
   }, function(msg) {
     var error;
+
     try {
       npm.load({save: true}, function () {
         npm.commands.outdated({json: true}, function (err, data) {
             //console.log(data);
             npm.commands.update(function(err, d){
                 console.log(d);
+                try {
+                  oldCommands = robot.commands;
+                  oldListeners = robot.listeners;
+                  robot.commands = [];
+                  robot.listeners = [];
+                  return reloadAllScripts(msg, success, function(err) {
+                    return msg.send(err);
+                  });
+                } catch (_error) {
+                  error = _error;
+                  console.log("Hubot reloader:", error);
+                  return msg.send("Could not reload all scripts: " + error);
+                }
             });
            });
         });
@@ -50,20 +64,8 @@ module.exports = function(robot) {
       console.log("Hubot reloader:", error);
       return msg.send("Could not reload all scripts: " + error);
     }
-    try {
-      oldCommands = robot.commands;
-      oldListeners = robot.listeners;
-      robot.commands = [];
-      robot.listeners = [];
-      return reloadAllScripts(msg, success, function(err) {
-        return msg.send(err);
-      });
-    } catch (_error) {
-      error = _error;
-      console.log("Hubot reloader:", error);
-      return msg.send("Could not reload all scripts: " + error);
-    }
   });
+
   success = function(msg) {
     var i, len, listener;
     for (i = 0, len = oldListeners.length; i < len; i++) {
@@ -74,6 +76,7 @@ module.exports = function(robot) {
     oldCommands = null;
     return msg.send("Reloaded all scripts");
   };
+
   walkSync = function(dir, filelist) {
     var file, files, fullPath, i, len;
     files = Fs.readdirSync(dir);
@@ -90,6 +93,7 @@ module.exports = function(robot) {
     }
     return filelist;
   };
+
   deleteScriptCache = function(scriptsBaseDir) {
     var cacheobj, error, file, fileList, i, len, ref;
     if (Fs.existsSync(scriptsBaseDir)) {
@@ -112,6 +116,7 @@ module.exports = function(robot) {
     }
     return robot.logger.debug("Finished deleting script cache!");
   };
+
   return reloadAllScripts = function(msg, success, error) {
     var externalScripts, hubotScripts, scriptsPath;
     robot = msg.robot;
