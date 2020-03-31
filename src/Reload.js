@@ -21,6 +21,8 @@ Fs = require('fs');
 
 Path = require('path');
 
+npm = require('npm');
+
 oldCommands = null;
 
 oldListeners = null;
@@ -34,6 +36,20 @@ module.exports = function(robot) {
     id: 'reload-scripts.reload'
   }, function(msg) {
     var error;
+    try {
+      npm.load({save: true}, function () {
+        npm.commands.outdated({json: true}, function (err, data) {
+            //console.log(data);
+            npm.commands.update(function(err, d){
+                console.log(d);
+            });
+           });
+        });
+    } catch (_error) {
+      error = _error;
+      console.log("Hubot reloader:", error);
+      return msg.send("Could not reload all scripts: " + error);
+    }
     try {
       oldCommands = robot.commands;
       oldListeners = robot.listeners;
