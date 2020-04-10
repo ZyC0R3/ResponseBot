@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.0');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.1');
   });
   // ---
   // KB Responses with user Triggers
@@ -509,6 +509,50 @@ module.exports = function(robot) {
     } else {
       msg.send('@' + user + ' *Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
       return msg.send('Check out the Installation Guide for support and instructions on how to setup rclone with Google Drive and Plex: https://bit.ly/2y7JOHF');
+    }
+  });
+  // ---
+  robot.hear(/(app emby) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Emby:* Your personal home videos, music, and photos together into one place, on any device. V1.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/158');
+    } else {
+      return msg.send('@' + user + ' *Emby:* Your personal home videos, music, and photos together into one place, on any device. V1.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/158');
+    }
+  });
+  // ---
+  robot.hear(/(app tautulli) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Tautulli:* A python based web application for monitoring, analytics and notifications for Plex Media Server. V2.2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/125');
+    } else {
+      return msg.send('@' + user + ' *Tautulli:* A python based web application for monitoring, analytics and notifications for Plex Media Server. V2.2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/125');
+    }
+  });
+  // ---
+  robot.hear(/(app jira) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Jira Software:* Jira Software is a software development tool used by agile teams to plan, track and release software. V8.8.0 Requires 3 app slot: https://www.appboxes.co/appstore/app/121');
+    } else {
+      return msg.send('@' + user + ' *Jira Software:* Jira Software is a software development tool used by agile teams to plan, track and release software. V8.8.0 Requires 3 app slot: https://www.appboxes.co/appstore/app/121');
+    }
+  });
+  // ---
+  robot.hear(/(app hubot) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*RocketChat Hubot:* Hubot app for RocketChat allows you to add your custom scripts. V2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/124');
+    } else {
+      return msg.send('@' + user + ' *RocketChat Hubot:* Hubot app for RocketChat allows you to add your custom scripts. V2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/124');
     }
   });
   // ---
