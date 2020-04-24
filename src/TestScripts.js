@@ -18,7 +18,7 @@
 module.exports = function(robot) {
   /// ---
 robot.hear(/(what vaur)/i, function(msg) {
-  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.6.5');
+  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.6.6');
   // --- Use this as the Git Changelog Record
   // --- 6.000 - Internal Code Testing (ICT)
 });
@@ -54,7 +54,8 @@ robot.hear(/(what vaur)/i, function(msg) {
     }
   });
     robot.hear(/(testversion1) ?(?:@(\w*))?/i, function(msg) {
-      return msg.Send(`V${config.version}`);
+      var pckg = require('./package.json');
+        return msg.Send(`V${console.log(pckg.version)}`);
   });
 };
 
