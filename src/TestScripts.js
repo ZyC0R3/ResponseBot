@@ -18,7 +18,7 @@
 module.exports = function(robot) {
   /// ---
 robot.hear(/(what vaur)/i, function(msg) {
-  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.6.2');
+  return msg.send('The current version of Test Scripts that is loaded is JS V1.0.6.3');
   // --- Use this as the Git Changelog Record
   // --- 6.000 - Internal Code Testing (ICT)
 });
@@ -53,20 +53,6 @@ robot.hear(/(what vaur)/i, function(msg) {
       return msg.send('For Support and Instructions on how to Install this App, Check out the support pages, https://bit.ly/2KlnyhJ');
     }
   });
-  robot.hear(/(testversion) ?(?:@(\w*))?/i, function(msg) {
-    exports.version = function(data)
-    {
-      var version = `**\`${data.config.version}\`**`;
-
-      if (auth.changelog)
-      {
-        version += ` ([changelog](${auth.changelog}))`;
-      }
-
-      data.color = "info";
-      data.text = `:robot:  Current bot version is ${version}`;
-      return msg.Send(data);
-    }};
     robot.hear(/(testversion1) ?(?:@(\w*))?/i, function(msg) {
       return msg.Send(${config.version});
     }};
