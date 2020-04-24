@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.1');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.2');
   });
   // ---
   // KB Responses with user Triggers
@@ -553,6 +553,36 @@ module.exports = function(robot) {
       return msg.send('*RocketChat Hubot:* Hubot app for RocketChat allows you to add your custom scripts. V2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/124');
     } else {
       return msg.send('@' + user + ' *RocketChat Hubot:* Hubot app for RocketChat allows you to add your custom scripts. V2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/124');
+    }
+  });
+  robot.hear(/(app firefox) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*FireFox:* Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation. V75 Requires 2 app slot: https://www.appboxes.co/appstore/app/159');
+    } else {
+      return msg.send('@' + user + ' *FireFox:* Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation. V75 Requires 2 app slot: https://www.appboxes.co/appstore/app/159');
+    }
+  });
+  robot.hear(/(app filezilla) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Filezilla:* The free FTP solution. The FileZilla Client not only supports FTP, but also FTP over TLS (FTPS) and SFTP. V3.47.2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/160');
+    } else {
+      return msg.send('@' + user + ' *Filezilla:* The free FTP solution. The FileZilla Client not only supports FTP, but also FTP over TLS (FTPS) and SFTP. V3.47.2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/160');
+    }
+  });
+  robot.hear(/(app jitsi) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Jitsi:* Jitsi is a collection of free and open-source multiplatform voice, videoconferencing and instant messaging applications for the web platform, Windows, Linux, Mac OS X and Android. V1.0.4025-1 Requires 2 app slot: https://www.appboxes.co/appstore/app/161');
+    } else {
+      return msg.send('@' + user + ' *Jitsi:* Jitsi is a collection of free and open-source multiplatform voice, videoconferencing and instant messaging applications for the web platform, Windows, Linux, Mac OS X and Android. V1.0.4025-1 Requires 2 app slot: https://www.appboxes.co/appstore/app/161');
     }
   });
   // ---

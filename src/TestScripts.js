@@ -53,7 +53,26 @@ robot.hear(/(what vaur)/i, function(msg) {
       return msg.send('For Support and Instructions on how to Install this App, Check out the support pages, https://bit.ly/2KlnyhJ');
     }
   });
+  robot.hear(/(testversion) ?(?:@(\w*))?/i, function(msg) {
+    exports.version = function(data)
+    {
+      var version = `**\`${data.config.version}\`**`;
+
+      if (auth.changelog)
+      {
+        version += ` ([changelog](${auth.changelog}))`;
+      }
+
+      data.color = "info";
+      data.text = `:robot:  Current bot version is ${version}`;
+      return msg.Send(data);
+    }};
+    robot.hear(/(testversion1) ?(?:@(\w*))?/i, function(msg) {
+      return msg.Send(${config.version});
+    }};
 };
+
+
 
 // ---
 // Script for AppBoxesCo use only JS V-TestScripts
