@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.6');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.9');
   });
   // ---
   // KB Responses with user Triggers
@@ -583,6 +583,19 @@ module.exports = function(robot) {
       return msg.send('*Jitsi:* Jitsi is a collection of free and open-source multiplatform voice, videoconferencing and instant messaging applications for the web platform, Windows, Linux, Mac OS X and Android. V1.0.4025-1 Requires 2 app slot: https://www.appboxes.co/appstore/app/161');
     } else {
       return msg.send('@' + user + ' *Jitsi:* Jitsi is a collection of free and open-source multiplatform voice, videoconferencing and instant messaging applications for the web platform, Windows, Linux, Mac OS X and Android. V1.0.4025-1 Requires 2 app slot: https://www.appboxes.co/appstore/app/161');
+    }
+  });
+  // ---
+  robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|)) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      msg.send('*Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
+      return msg.send('This user generated script may help you in your endevor https://gist.github.com/coder8338/a614f156c916b35becf11c53352b499a. *Please Note, no support can be provided by Appbox or its Admins/Moderators*')
+    } else {
+      msg.send('@' + user + ' *Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
+      return msg.send('This user generated script may help you in your endevor https://gist.github.com/coder8338/a614f156c916b35becf11c53352b499a. *Please Note, no support can be provided by Appbox or its Admins/Moderators*')
     }
   });
   // ---
