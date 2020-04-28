@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.10');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.11');
   });
   // ---
   // KB Responses with user Triggers
@@ -371,7 +371,7 @@ module.exports = function(robot) {
   robot.hear(/(app (nginx|php(7)?)) ?(?:@(\w*))?/i, function(msg) {
     // https://www.seedboxco.net/viewarticle/?article=installing-nginx-php7-on-your-seedbox
     var user;
-    user = escape(msg.match[2]);
+    user = escape(msg.match[3]);
     if (user === "undefined") {
       return msg.send('*Nginx & PHP7:* Nginx is a web server and can also be used as a reverse proxy, load balancer and HTTP cache. V1.14.0-2 Requires 1 app slot: https://www.appboxes.co/appstore/app/108');
     } else {
@@ -589,7 +589,7 @@ module.exports = function(robot) {
   robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett)) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
-    user = escape(msg.match[2]);
+    user = escape(msg.match[3]);
     if (user === "undefined") {
       msg.send('*Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
       return msg.send('This user generated script may help you in your endevor https://gist.github.com/coder8338/a614f156c916b35becf11c53352b499a. *Please Note, no support can be provided by Appbox or its Admins/Moderators*')
