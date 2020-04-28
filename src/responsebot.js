@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.9');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.10');
   });
   // ---
   // KB Responses with user Triggers
@@ -586,7 +586,7 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett)) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
     user = escape(msg.match[2]);
