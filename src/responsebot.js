@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.11');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.12');
   });
   // ---
   // KB Responses with user Triggers
@@ -555,6 +555,7 @@ module.exports = function(robot) {
       return msg.send('@' + user + ' *RocketChat Hubot:* Hubot app for RocketChat allows you to add your custom scripts. V2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/124');
     }
   });
+  // ---
   robot.hear(/(app firefox) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
@@ -565,6 +566,7 @@ module.exports = function(robot) {
       return msg.send('@' + user + ' *FireFox:* Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation. V75 Requires 2 app slot: https://www.appboxes.co/appstore/app/159');
     }
   });
+  // ---
   robot.hear(/(app filezilla) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
@@ -575,6 +577,7 @@ module.exports = function(robot) {
       return msg.send('@' + user + ' *Filezilla:* The free FTP solution. The FileZilla Client not only supports FTP, but also FTP over TLS (FTPS) and SFTP. V3.47.2.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/160');
     }
   });
+  // ---
   robot.hear(/(app jitsi) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
@@ -586,7 +589,29 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/(app jellyfin) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Jellyfin:* is the volunteer-built media solution that puts you in control of your media, Stream to any device from your own server, with no strings attached. V Latest-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/162');
+    } else {
+      return msg.send('@' + user + ' *Jellyfin:* is the volunteer-built media solution that puts you in control of your media, Stream to any device from your own server, with no strings attached. V Latest-1 Requires 1 app slot: https://www.appboxes.co/appstore/app/ ');
+    }
+  });
+  // ---
+  robot.hear(/(app Debian) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Debian:*, also called Debian GNU/Linux, is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project. V9.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/163');
+    } else {
+      return msg.send('@' + user + ' *Debian:*, also called Debian GNU/Linux, is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project. V9.0 Requires 5 app slot: https://www.appboxes.co/appstore/app/163');
+    }
+  });
+  // ---
+  robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|synclounge)) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
     user = escape(msg.match[3]);
