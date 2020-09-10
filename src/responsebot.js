@@ -768,7 +768,7 @@ module.exports = function(robot) {
   robot.hear(/((submit|raise|request) a?.*(bug|feature|app)|issue tracker) ?(?:@(\w*))?/i, function(msg) {
     //
     var user, username;
-    user = escape(msg.match[3]);
+    user = escape(msg.match[4]);
     if (user === "undefined") {
       username = msg.message.user.name;
       return msg.send('@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_');
