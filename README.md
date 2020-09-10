@@ -79,6 +79,15 @@ V7.0.1 Converted index.coffee to index.js
 V7.0.2 Updated all App Command Links
 V7.0.3 Updated Reload Script
 V7.0.4 Test Patch
+V7.1.0 Test Scripts Updated
+V7.1.5 New Commands Added, Updated chat triggers
+V7.1.6 Updated Links
+V7.1.8 Test Scripts Updated
+V7.1.9 New Commands Added
+V7.1.10 Updated Links
+V7.1.11 Updated chat triggers
+V7.1.12 New Commands Added, Updated chat triggers
+V7.1.13 Updated Links
 ```
 
 ## Coming Soon!

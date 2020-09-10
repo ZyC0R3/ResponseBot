@@ -508,7 +508,7 @@ module.exports = function(robot) {
       return msg.send('*Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
     } else {
       msg.send('@' + user + ' *Rclone:* Allows you to access other file systems from your apps. V0.3 Requires 1 app slot: https://www.appboxes.co/appstore/app/123');
-      return msg.send('Check out the Installation Guide for support and instructions on how to setup rclone with Google Drive and Plex: https://bit.ly/2y7JOHF');
+      return msg.send('Check out the Installation Guide for support and instructions on how to setup rclone with Google Drive and Plex: https://bit.ly/35mDQBt');
     }
   });
   // ---
@@ -611,7 +611,7 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(app (radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|synclounge)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/(app (lidarr|radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|synclounge|bazarr|medusa|lazylibrarian|sabnzbdplus)) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
     user = escape(msg.match[3]);
