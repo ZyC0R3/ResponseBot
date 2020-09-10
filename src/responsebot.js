@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.12');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.14');
   });
   // ---
   // KB Responses with user Triggers
@@ -611,15 +611,70 @@ module.exports = function(robot) {
     }
   });
   // ---
-  robot.hear(/(app (lidarr|radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|synclounge|bazarr|medusa|lazylibrarian|sabnzbdplus)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/(app Syncthing) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Syncthing:*, Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers. V1.7.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/164');
+    } else {
+      return msg.send('@' + user + ' *Syncthing:*, Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers. V1.7.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/164');
+    }
+  });
+  // ---
+  robot.hear(/(app Chatwoot) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Chatwoot:*, is a customer support tool for instant messaging channels which can help businesses provide exceptional customer support through their websites or social media channels. V1.6.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/165');
+    } else {
+      return msg.send('@' + user + ' *Chatwoot:*, is a customer support tool for instant messaging channels which can help businesses provide exceptional customer support through their websites or social media channels. V1.6.1 Requires 1 app slot: https://www.appboxes.co/appstore/app/165');
+    }
+  });
+  // ---
+  robot.hear(/(app Mautic) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*Mautic:*, Mautic enables brands to integrate and personalize all their digital properties and channels into a seamless customer experience. V3.0.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/166');
+    } else {
+      return msg.send('@' + user + ' *Mautic:*, Mautic enables brands to integrate and personalize all their digital properties and channels into a seamless customer experience. V3.0.2 Requires 1 app slot: https://www.appboxes.co/appstore/app/166');
+    }
+  });
+  // ---
+  robot.hear(/(app (the(.?lounge))) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[4]);
+    if (user === "undefined") {
+      return msg.send('*The Lounge:*, The Lounge is an IRC client that never sleeps. It runs on any server with Node.js. V4.2.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/167');
+    } else {
+      return msg.send('@' + user + ' *The Lounge:*, The Lounge is an IRC client that never sleeps. It runs on any server with Node.js. V4.2.0 Requires 1 app slot: https://www.appboxes.co/appstore/app/167');
+    }
+  });
+  // ---
+  robot.hear(/(app BLANK) ?(?:@(\w*))?/i, function(msg) {
+    //
+    var user;
+    user = escape(msg.match[2]);
+    if (user === "undefined") {
+      return msg.send('*BLANK:*, is a non existent app, try again. V999 Requires 1000 app slot: https://www.appboxes.co/appstore/app/000');
+    } else {
+      return msg.send('@' + user + ' *BLANK:*, is a non existent app, try again. V999 Requires 1000 app slot: https://www.appboxes.co/appstore/app/000');
+    }
+  });
+  // ---
+  robot.hear(/(app (lidarr|radarr|sonarr|flexget|filebot|couchpotato|sickrage|nzbget|ombi|jackett|synclounge|bazarr|medusa|lazylibrarian|sabnzbdplus|sabnzbd)) ?(?:@(\w*))?/i, function(msg) {
     //
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
-      msg.send('*Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
+      msg.send('*Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox, however may be in the future. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
       return msg.send('This user generated script may help you in your endevor https://gist.github.com/coder8338/a614f156c916b35becf11c53352b499a. *Please Note, no support can be provided by Appbox or its Admins/Moderators*')
     } else {
-      msg.send('@' + user + ' *Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
+      msg.send('@' + user + ' *Unsupported Apps:* Due to a multitude of reasons, the app you have Requested is not offically supported by AppBox, however may be in the future. You can however install this on the Ubuntu Installation. Type "App ubuntu" for more info');
       return msg.send('This user generated script may help you in your endevor https://gist.github.com/coder8338/a614f156c916b35becf11c53352b499a. *Please Note, no support can be provided by Appbox or its Admins/Moderators*')
     }
   });
