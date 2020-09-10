@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.17');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.18');
   });
   // ---
   // KB Responses with user Triggers
@@ -771,9 +771,9 @@ module.exports = function(robot) {
     user = escape(msg.match[4]);
     if (user === "undefined") {
       username = msg.message.user.name;
-      return msg.send('@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_');
+      return msg.send('@' + username + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.net/cylo/cylo/-/boards _(You will need to create an account)_');
     } else {
-      return msg.send('@' + user + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.io/cylo/cylo/boards _(You will need to create an account)_');
+      return msg.send('@' + user + ' You can raise or track the status of a bug or requested feature and submit a new one at https://git.cylo.net/cylo/cylo/-/boards _(You will need to create an account)_');
     }
   });
   // ---
@@ -810,6 +810,6 @@ module.exports = function(robot) {
 };
 
 // ---
-// Script for AppBoxesCo use only JS V7.0.2
+// Script for AppBoxesCo use only JS V7.1.18
 // ZyC0R3 - Rid
 // ---
