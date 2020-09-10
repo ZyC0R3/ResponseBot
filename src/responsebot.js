@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.15');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.16');
   });
   // ---
   // KB Responses with user Triggers
@@ -765,7 +765,7 @@ module.exports = function(robot) {
     return msg.send('This File Explorer is owned by a privileged user and access the filesystem outside of the container so will work regardless  if your disk is full or not. Once you have deleted data it may take up to 15 minutes for services to reload, restarting applicaiton during this time will not speed this process up.');
   });
   // ---
-  robot.hear(/((submit|raise|request) a?.*bug|issue tracker|a (feature|app)) ?(?:@(\w*))?/i, function(msg) {
+  robot.hear(/((submit|raise|request) a?.*(bug|feature|app)|issue tracker) ?(?:@(\w*))?/i, function(msg) {
     //
     var user, username;
     user = escape(msg.match[3]);
