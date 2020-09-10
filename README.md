@@ -89,7 +89,8 @@ V7.1.11 Updated chat triggers
 V7.1.12 New Commands Added, Updated chat triggers
 V7.1.13 Updated Links
 V7.1.14 New Commands Added
-V7.1.17 Updated chat triggers
+V7.1.17 Updated chat triggers, Updated Links
+V7.1.18 Updated chat triggers, Updated Links
 ```
 
 ## Coming Soon!
