@@ -175,7 +175,7 @@ module.exports = function(robot) {
   });
   // ---
   robot.hear(/(kb (add|custom) domain) ?(?:@(\w*))?/i, function(msg) {
-    // https://www.seedboxco.net/viewarticle/?article=setting-up-a-public_html-folder
+    // 
     var user;
     user = escape(msg.match[3]);
     if (user === "undefined") {
