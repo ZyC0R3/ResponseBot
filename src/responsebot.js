@@ -45,7 +45,7 @@ module.exports = function(robot) {
   // KB Version Info
   // ---
   robot.hear(/(what vaur)/i, function(msg) {
-    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.18');
+    return msg.send('The current version of ResponseBot that is loaded is JS V7.1.19');
   });
   // ---
   // KB Responses with user Triggers
@@ -171,6 +171,27 @@ module.exports = function(robot) {
       return msg.send('Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2UFQF2I');
     } else {
       return msg.send('@' + user + ' Click here for instructions on setting Electorrent, The best Multi-client desktop torrent manager: https://bit.ly/2UFQF2I');
+    }
+  });
+  // ---
+  robot.hear(/(kb (add|custom) domain) ?(?:@(\w*))?/i, function(msg) {
+    // https://www.seedboxco.net/viewarticle/?article=setting-up-a-public_html-folder
+    var user;
+    user = escape(msg.match[3]);
+    if (user === "undefined") {
+      msg.send('Quick Steps for Adding a Custom Domain.');
+      msg.send('1: Add an A record using your DNS provider for example rutorrent.example.com pointing to your appbox IP (found on https://www.appbox.co/appboxmanager/appboxes)');
+      msg.send('2: Make sure if you\'re using CloudFlare that proxying is disabled and the orange cloud icon for the record is grey');
+      msg.send('3: Go to https://www.appbox.co/appboxmanager/domains and add just the base domain (not the subdomain) for example: example.com');
+      msg.send('4: Go to the app store, select the app you wish to install, Set the domain field to your custom domain, for example: example.com');
+      return msg.send('5: Set the subdomain field to whatever you want to use for the first part of the domain, for example if you wanted rutorrent.example.com, you would set the subdomain field to rutorrent');
+    } else {
+      msg.send('@' + user + ' Quick Steps for Adding a Custom Domain.');
+      msg.send('1: Add an A record using your DNS provider for example rutorrent.example.com pointing to your appbox IP (found on https://www.appbox.co/appboxmanager/appboxes)');
+      msg.send('2: Make sure if you\'re using CloudFlare that proxying is disabled and the orange cloud icon for the record is grey');
+      msg.send('3: Go to https://www.appbox.co/appboxmanager/domains and add just the base domain (not the subdomain) for example: example.com');
+      msg.send('4: Go to the app store, select the app you wish to install, Set the domain field to your custom domain, for example: example.com');
+      return msg.send('5: Set the subdomain field to whatever you want to use for the first part of the domain, for example if you wanted rutorrent.example.com, you would set the subdomain field to rutorrent');
     }
   });
   // ---
@@ -810,6 +831,5 @@ module.exports = function(robot) {
 };
 
 // ---
-// Script for AppBoxesCo use only JS V7.1.18
+// Script for AppBoxesCo use only JS V7.1.19
 // ZyC0R3 - Rid
-// ---
